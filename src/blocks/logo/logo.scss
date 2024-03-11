@@ -1,0 +1,17 @@
+.logo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+
+  img {
+    display: block;
+    width: 144px;
+    height: 32px;
+
+    @media (min-width: $screen-md) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+}
