@@ -1,0 +1,99 @@
+<!--DEV
+@ @include('blocks/selection-form/selection-form.html')
+-->
+
+<section class="selection-form">
+  <h2 class="visually-hidden">Віджет із формою підбору квитків за напрямками та датами</h2>
+
+  <div class="selection-form__inner">
+
+    <div class="selection-form__nav">
+      <a href="#" class="selection-form__nav-link  active">
+        <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus"></use></svg>
+        <span>Автобуси</span>
+      </a>
+      <a href="#" class="selection-form__nav-link">
+        <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#train"></use></svg>
+        <span>Залізниця</span>
+      </a>
+      <a href="#" class="selection-form__nav-link">
+        <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#airplane"></use></svg>
+        <span>Авіа</span>
+      </a>
+    </div>
+
+    <div class="selection-form__widget">
+      <form class="selection-form__form" action="#" method="post">
+        <div class="selection-form__widget-inner">
+          <div class="selection-form__fields-group">
+
+            <div class="selection-form__row">
+              <div class="spec-select__wrapper">
+                <span class="selection-form__lbl">Звідки</span>
+                <select class="spec-select" name="from-where">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+                <span class="selection-form__error"></span>
+              </div>
+
+              <div class="selection-form__switcher-wrapper">
+                <a href="#" class="selection-form__switcher">
+                  <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#switch-direction"></use></svg>
+                  <span class="visually-hidden">Перемикач напрямку</span>
+                </a>
+              </div>
+
+              <div class="spec-select__wrapper">
+                <span class="selection-form__lbl">Куди</span>
+                <select class="spec-select" name="where-to">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+                <span class="selection-form__error"></span>
+              </div>
+            </div>
+
+            <div class="selection-form__row  selection-form__row--date">
+
+              <label class="field-text  field-text--small  spec-select__wrapper  spec-select__wrapper--date">
+                <span class="field-text__name">Туди</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input date" type="text" name="dateTo" placeholder="Дата">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <label class="field-text  field-text--small  spec-select__wrapper  spec-select__wrapper--date  spec-select__wrapper--back">
+                <span class="field-text__name">Назад</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input date" type="text" name="dateFrom" placeholder="Дата">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+
+              <div class="spec-select__wrapper  spec-select__wrapper--pass">
+                <span class="selection-form__lbl">Пасажири</span>
+                <select class="spec-select" name="pas-amount">
+                  <option>1 персона</option>
+                  <option>2 персони</option>
+                  <option>3 персони</option>
+                  <option>4 персони</option>
+                  <option>5 персон</option>
+                </select>
+                <span class="selection-form__error"></span>
+              </div>
+
+            </div>
+
+          </div>
+          <button class="btn  btn--cta  selection-form__submit" type="submit">
+            <span>Знайти квиток</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

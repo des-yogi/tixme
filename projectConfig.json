@@ -22,14 +22,20 @@
     "table": [],
     "table-mobile-scroll": [],
     "to-top": [],
-    "typo": []
+    "typo": [],
+    "selection-form": [],
+    "spec-select": [],
+    "datepicker": []
   },
   "addCssBefore": [
+    "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",
     "../../node_modules/bootstrap/scss/_functions",
     "../../node_modules/bootstrap/scss/_variables",
     "../../node_modules/bootstrap/scss/_mixins",
     "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_dropdown",
+    "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_offcanvas",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss"
   ],
@@ -41,7 +47,8 @@
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/autosize/dist/autosize.min.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "./node_modules/vanillajs-datepicker/dist/js/datepicker.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

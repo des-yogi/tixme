@@ -3,30 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Home page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="MobileOptimized" content="360">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="format-detection" content="date=no">
-  <meta name="format-detection" content="address=no">
-  <meta name="format-detection" content="email=no">
-  <meta name="description" content>
-  <meta name="keywords" content>
-  <meta name="robots" content="index,follow">
-  <!-- OpenGraph microdata
-  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
-  <meta property="og:locale"        content="uk_UA" />
-  -->
-  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->
-  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->
-  <link href="css/slimselect.css" rel="stylesheet" media="screen">
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta name="MobileOptimized" content="360">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="format-detection" content="date=no">  <meta name="format-detection" content="address=no">  <meta name="format-detection" content="email=no">  <meta name="description" content>  <meta name="keywords" content>  <meta name="robots" content="index,follow">  <!-- OpenGraph microdata  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />  <meta property="og:type"          content="website" />  <meta property="og:title"         content="Your Website Title" />  <meta property="og:description"   content="Your description" />  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />  <meta property="og:locale"        content="uk_UA" />  -->  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->  <link href="css/slimselect.css" rel="stylesheet" media="screen">  <link href="css/style.min.css" rel="stylesheet" media="screen"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -39,15 +16,12 @@
 <noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
   <div class="page__inner">
     <div class="page__content">
-      <div class="container  page-header__wrapper">
-        <header class="page-header">
-          <a href="/" class="logo">
-            <img src="img/tixme-logo.svg" alt="logo" width="180" height="40">
-          </a>
-          <div class="page-header__service">
-            <div class="lang-switcher  dropdown">
-              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span>Укр</span>
+      <header class="container  page-header">
+        <div class="page-header__inner">          <a href="/" class="logo">            <img src="img/tixme-logo.svg" alt="logo" width="180" height="40">          </a>          <div class="page-header__service">
+            <div class="lang-switcher  dropdown-center">
+              <button class="dropdown-toggle  lang-switcher__btn" data-bs-toggle="dropdown" aria-expanded="false" title="Перемикач мови сайту">
+                <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
+                <span class="lang-switcher__text">Укр</span>
               </button>
               <ul class="dropdown-menu  lang-switcher__list">
                 <li class="lang-switcher__item">
@@ -59,26 +33,134 @@
               </ul>
             </div>
           </div>
-        </header>
-      </div>
+        </div>
+        <h1 class="display  page-header__title">Квитки на автобус <br> по Україні, Польщі та Європі</h1>
+        <section class="selection-form">
+          <h2 class="visually-hidden">Віджет із формою підбору квитків за напрямками та датами</h2>
+          <div class="selection-form__inner">
+            <div class="selection-form__nav">
+              <a href="#" class="selection-form__nav-link  active">
+                <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus"/></svg>
+                <span>Автобуси</span>
+              </a>
+              <a href="#" class="selection-form__nav-link">
+                <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#train"/></svg>
+                <span>Залізниця</span>
+              </a>
+              <a href="#" class="selection-form__nav-link">
+                <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#airplane"/></svg>
+                <span>Авіа</span>
+              </a>
+            </div>
+            <div class="selection-form__widget">
+              <form class="selection-form__form" action="#" method="post">
+                <div class="selection-form__widget-inner">
+                  <div class="selection-form__fields-group">
+                    <div class="selection-form__row">
+                      <div class="spec-select__wrapper">
+                        <span class="selection-form__lbl">Звідки</span>
+                        <select class="spec-select" name="from-where">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                        <span class="selection-form__error"></span>
+                      </div>
+                      <div class="selection-form__switcher-wrapper">
+                        <a href="#" class="selection-form__switcher">
+                          <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#switch-direction"/></svg>
+                          <span class="visually-hidden">Перемикач напрямку</span>
+                        </a>
+                      </div>
+                      <div class="spec-select__wrapper">
+                        <span class="selection-form__lbl">Куди</span>
+                        <select class="spec-select" name="where-to">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                        <span class="selection-form__error"></span>
+                      </div>
+                    </div>
+                    <div class="selection-form__row  selection-form__row--date">
+                      <label class="field-text  field-text--small  spec-select__wrapper  spec-select__wrapper--date">
+                        <span class="field-text__name">Туди</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input date" type="text" name="dateTo" placeholder="Дата">
+                          <!-- <span class="field-text__help-text">Пояснение</span> -->
+                        </span>
+                      </label>
+                      <label class="field-text  field-text--small  spec-select__wrapper  spec-select__wrapper--date  spec-select__wrapper--back">
+                        <span class="field-text__name">Назад</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input date" type="text" name="dateFrom" placeholder="Дата">
+                          <span class="field-text__help-text"></span>
+                        </span>
+                      </label>
+                      <div class="spec-select__wrapper  spec-select__wrapper--pass">
+                        <span class="selection-form__lbl">Пасажири</span>
+                        <select class="spec-select" name="pas-amount">
+                          <option>1 персона</option>
+                          <option>2 персони</option>
+                          <option>3 персони</option>
+                          <option>4 персони</option>
+                          <option>5 персон</option>
+                        </select>
+                        <span class="selection-form__error"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn  btn--cta  selection-form__submit" type="submit">
+                    <span>Знайти квиток</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </header>
       <main role="main">
         <div class="container">
         </div>
       </main>
     </div>
-    <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
-        page-footer
-      </footer>
-    </div>
+    <div class="page__footer-wrapper">      <footer class="page-footer" role="contentinfo">        page-footer      </footer>    </div>
   </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
-  <script src="js/slimselect.min.js"></script>
-  <script src="js/script.min.js"></script>
-  <script>
-    new SlimSelect({
-      select: '#selectElement'
-    })
+  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->  <script src="js/slimselect.min.js"></script>  <script src="js/script.min.js"></script>  <script>
+    const selArr = document.querySelectorAll('.spec-select');
+    if (selArr) {
+      selArr.forEach(function(item) {
+        new SlimSelect({
+          select: item
+        })
+      });
+    }
+    const datePickerArr = document.querySelectorAll('.date');
+    (function () {
+      Datepicker.locales.uk = {
+        days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+        daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+        monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+        today: "Сьогодні",
+        clear: "Очистити",
+        format: "dd.mm.yyyy",
+        weekStart: 1
+      };
+    }());
+    if (datePickerArr) {
+      datePickerArr.forEach(function(item) {
+        new Datepicker(item, {
+          autohide: true,
+          //clearButton: true,
+          //format: 'dd.mm.yyyy',
+          language: 'uk',
+          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>',
+          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>',
+        });
+      });
+    }
   </script>
 </body>
 </html>

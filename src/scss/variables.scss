@@ -13,8 +13,8 @@ $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
 $color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
-$color-warning:               hsl(35, 84%, 62%);
+$color-danger:                #FF3100;
+$color-warning:               #FF6100;
 
 //$color-vk:                    #4a76a8;
 //$color-fb:                    #4267b2;
@@ -24,24 +24,40 @@ $color-warning:               hsl(35, 84%, 62%);
 
 // Семантические цвета
 
-$main-color:                  #0270CA;
+$main-color:                  #0270CA; //dark-blue
 $color-main:                  $main-color;
+
 $secondary-color:             #FF6100;
 
-$text-color:                  #575B66;
-$title-color:                 #393939;
-$text-muted:                  #BDBDBD;
+$accent-color:                #FF3100; // red
+$accent-color--hover:         #FF6100; // orange
+
+$blue-bg:                     #E6F7FE;
+$blue-bg--light:              #F6FCFF;
+
+$header-bg:                   $blue-bg;
+
+$text-color:                  #000000;
+$title-color:                 #20415B; // navy-blue
+
+$text-muted:                  #6D6D6D; // gray3
 
 $body-bg:                     #ffffff;
 
 $link-color:                  $main-color;
-$link-color--hover:           #4240CF;
+$link-color--hover:           #0593FF; // bright-blue
 
-$border-color:                $text-muted;
-$divider-color:               $main-color;
+$border-color:                #E8E8E8; // gray1
+$border-color--disabled:      #8D93A1; // gray2
+$divider-color:               $border-color;
+
+$input-bg--disabled:          $border-color;
+
 // Базовая типографика
 
 $font-size:                   16px;
+$font-size-sm:                14px;
+$font-size-xs:                12px;
 
 $font-size--h1:               38px;
 $font-size--h2:               32px;
@@ -84,12 +100,12 @@ $grid-gutter-width:           24px;
 
 // Разное
 
-$field-padding-vertical:      5px;
-$field-padding-horizontal:    12px;
+$field-padding-vertical:      12px;
+$field-padding-horizontal:    16px;
 
-$border-radius:               3px;
+$border-radius:               8px;
 $opacity:                     0.7;
-$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+$shadow:                      1px 1px 0 5px rgba(0, 0, 0, 0.25);
 $transition-time:             0.2s;
 
 // BS4 vars for mixins

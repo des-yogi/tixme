@@ -2,15 +2,18 @@
 @ @include('blocks/page-header/page-header.html')
 -->
 
-<div class="container  page-header__wrapper">
-  <header class="page-header">
+<header class="container  page-header">
+
+  <div class="page-header__inner">
     @@include('../../blocks/logo/logo.html')
 
     <div class="page-header__service">
       @@include('../../blocks/lang-switcher/lang-switcher.html')
     </div>
-  </header>
+  </div>
 
+  <h1 class="display  page-header__title">Квитки на автобус <br> по Україні, Польщі та Європі</h1>
 
+  @@include('../../blocks/selection-form/selection-form.html')
 
-</div>
+</header>
