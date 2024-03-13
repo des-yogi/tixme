@@ -1,8 +1,19 @@
 .page-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $header-bg;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__title {
+    margin: 70px 0;
+  }
 }

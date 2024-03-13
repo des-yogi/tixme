@@ -1,0 +1,78 @@
+.datepicker {
+  //left: -12px !important;
+  font-family: inherit;
+
+  @media (max-width: $screen-xl - 1) {
+    transform: translateX(-12px);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .datepicker-picker {
+    padding: 12px;
+  }
+
+  .datepicker-controls {
+
+    .button {
+      font-family: inherit;
+      font-weight: 600;
+
+      &:hover,
+      &:focus {
+        background-color: $blue-bg--light;
+      }
+
+      &:active {
+        background-color: $blue-bg;
+      }
+    }
+  }
+
+  .datepicker-main {
+    padding: 0;
+    margin-top: 8px;
+  }
+
+  .datepicker-view {
+    //width: 17rem;
+    width: 272px;
+  }
+
+  .days-of-week {
+    margin-bottom: 8px;
+  }
+
+  .dow {
+    font-weight: 400;
+  }
+
+  .datepicker-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  .datepicker-cell {
+    font-size: $font-size-sm;
+
+    &.day {
+      border-radius: $border-radius;
+      border: 2px solid $border-color;
+    }
+
+    &.focused:not(.selected) {
+      background-color: $blue-bg--light;
+      border: 2px solid $main-color;
+    }
+
+    &.next:not(.disabled),
+    &.prev:not(.disabled) {
+      color: #698CA5;
+      background-color: $blue-bg--light;
+      border: none;
+    }
+  }
+}

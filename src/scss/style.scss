@@ -4,11 +4,14 @@
  * Читайте ./README.md для понимания.
  */
 
+@import '../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css';
 @import '../../node_modules/bootstrap/scss/_functions';
 @import '../../node_modules/bootstrap/scss/_variables';
 @import '../../node_modules/bootstrap/scss/_mixins';
 @import '../../node_modules/bootstrap/scss/_accordion';
 @import '../../node_modules/bootstrap/scss/_dropdown';
+@import '../../node_modules/bootstrap/scss/_modal';
+@import '../../node_modules/bootstrap/scss/_offcanvas';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import './src/blocks/btn/btn.scss';
@@ -34,4 +37,7 @@
 @import './src/blocks/table-mobile-scroll/table-mobile-scroll.scss';
 @import './src/blocks/to-top/to-top.scss';
 @import './src/blocks/typo/typo.scss';
+@import './src/blocks/selection-form/selection-form.scss';
+@import './src/blocks/spec-select/spec-select.scss';
+@import './src/blocks/datepicker/datepicker.scss';
 @import './src/scss/print.scss';

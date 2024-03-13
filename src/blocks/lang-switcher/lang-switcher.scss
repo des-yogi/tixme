@@ -1,80 +1,61 @@
 .lang-switcher {
-  //@include col(xs, 5, $grid-columns, 20px);
-  //@include col(md, 2);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
 
-  @media (min-width: $screen-md) {
-    display: inline-flex;
-    max-width: 90px;
-    margin-left: 0;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
-  .dropdown-toggle {
-    padding: 5px 10px;
-    font-family: $font-family;
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0;
     font-size: $font-size;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
+    color: $text-color;
+    background-color: transparent;
+    border: none;
     user-select: none;
     cursor: pointer;
-    color: inherit;
-    background-color: $white;
-    border: none;
-    box-shadow: $shadow;
-
-    &:hover,
-    &:focus {
-      color: $main-color;
-    }
 
     &::after {
-      display: none;
-    }
-
-    &::before {
-      display: inline-block;
-      vertical-align: middle;
-      content: "";
-      width: 16px;
-      height: 10px;
-      margin-right: 10px;
-      //background: svg-load('../blocks/sprite-svg/svg/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background: svg-load('../blocks/lang-switcher/bg-img/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      background-size: 24px;
       background-position: center;
-      background-size: 100%;
-      transition: transform $transition-time ease-out;
-    }
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);
+      border: none;
 
-    &[aria-expanded=true] {
-      &::before {
-        transform: rotate(180deg) translateY(2px);
+      @media (max-width: $screen-md - 1) {
+        display: none;
       }
     }
   }
 
-  .dropdown-menu {
-    min-width: 65px;
-  }
+  &__text {
 
-  .dropdown-item {
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: 500;
-    padding-right: 5px;
-    color: inherit;
-
-    &:hover,
-    &:focus {
-      color: $main-color;
+    @media (max-width: $screen-md - 1) {
+      display: none;
     }
   }
-  .dropdown-item + .dropdown-item {
-    padding-top: 10px;
+
+  &__list {
+    min-width: 64px;
+    font-size: $font-size;
+    font-weight: 600;
+  }
+
+  &__item {
+
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  &__link {
+    //font-size: inherit;
+    font-weight: inherit;
   }
 }

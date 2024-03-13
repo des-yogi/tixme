@@ -34,10 +34,45 @@
   </div>
 
   @@include('_include/page_bottom.html')
+
   <script>
-    new SlimSelect({
-      select: '#selectElement'
-    })
+    const selArr = document.querySelectorAll('.spec-select');
+    if (selArr) {
+      selArr.forEach(function(item) {
+        new SlimSelect({
+          select: item
+        })
+      });
+    }
+
+    const datePickerArr = document.querySelectorAll('.date');
+
+    (function () {
+      Datepicker.locales.uk = {
+        days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+        daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+        monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+        today: "Сьогодні",
+        clear: "Очистити",
+        format: "dd.mm.yyyy",
+        weekStart: 1
+      };
+    }());
+
+    if (datePickerArr) {
+      datePickerArr.forEach(function(item) {
+        new Datepicker(item, {
+          autohide: true,
+          //clearButton: true,
+          //format: 'dd.mm.yyyy',
+          language: 'uk',
+          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>',
+          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>',
+        });
+      });
+    }
   </script>
 
 </body>

@@ -1,81 +1,96 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
+  padding: 0  $field-padding-horizontal;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
-  font-size: 1em;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  white-space: nowrap;
+  color: $white;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  border: none;
+  background-color: $main-color;
   background-image: none;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+  user-select: none;
   cursor: pointer;
 
   &:hover,
   &:focus {
+    //color: $text-color;
     text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
+    background-color: $link-color--hover;
     // border-color: darken($gray-lighter, 12%);
   }
 
-  &:active,
-  &:focus {
-    // @include field-focus;
+  &:active {
+    background-color: $link-color--hover;
   }
 
   &--disabled,
   &:disabled {
     // opacity: $opacity;
+    color: $text-muted;
+    background-color: $input-bg--disabled;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  svg + span,
+  span + svg {
+    margin-left: 10px;
+  }
 
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
 
+  span {
+    line-height: 56px;
+  }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+  &--cta {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: $accent-color;
+    //border: 1px solid $main-color;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &:hover,
+    &:focus {
+      //color: #fff;
+      background-color: $accent-color--hover;
+      //border-color: darken($color-main, 12%);
+    }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &:active {
+      background-color: $main-color;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: $input-bg--disabled;
+      cursor: not-allowed;
+
+      @at-root a.btn--disabled {
+        pointer-events: none;
+      }
+    }
+  }
 }
