@@ -1,15 +1,8 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/burger/burger.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="burger"><span></span></div>
-<div class="burger  burger--close"><span></span></div>
-
 -->
+
+<button class="burger" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">
+  <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"></use></svg>
+  <span class="visually-hidden">Перемикач меню</span>
+</button>

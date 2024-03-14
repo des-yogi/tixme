@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/blog-card/blog-card.html', {
+  "title": 'Lorem ipsum dolor sit amet consectetur',
+  "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip…'
+})
+-->
+
+<article class="blog-card">
+
+  <div class="embed-responsive  blog-card__img">
+    <picture>
+      <source srcset="img/blog-img.webp,
+                      img/blog-img.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/blog-img.jpg,
+                      img/blog-img.jpg 2x" media="(min-width: 1280px)">
+      <!-- 384x216, 576x324 2x -->
+      <source srcset="img/blog-img.webp" media="(min-width: 992px)" type="image/webp">
+      <source srcset="img/blog-img.jpg" media="(min-width: 992px)">
+      <!-- 576x324 -->
+      <source srcset="img/blog-img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/blog-img.jpg" media="(min-width: 768px)">
+      <!-- 675x380 -->
+      <source srcset="img/blog-img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/blog-img.jpg" media="(min-width: 480px)">
+      <!-- 1020x574 -->
+      <source srcset="img/blog-img.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/blog-img.jpg" media="(min-width: 320px)">
+      <!-- 675x380 -->
+      <img src="img/blog-img.jpg" width="1152" height="648" alt="Descr text" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="blog-card__text">
+    <h3 class="h4  blog-card__title">
+      <a href="#" class="blog-card__link">@@title</a>
+    </h3>
+    <p>@@text</p>
+  </div>
+
+</article>

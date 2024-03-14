@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus {
-    //color: $text-color;
+    color: $white;
     text-decoration: none;
     background-color: $link-color--hover;
     // border-color: darken($gray-lighter, 12%);
@@ -91,6 +91,26 @@
       @at-root a.btn--disabled {
         pointer-events: none;
       }
+    }
+  }
+
+  &--icon {
+    width: 48px;
+    height: 48px;
+    min-height: auto;
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: $accent-color--hover;
     }
   }
 }

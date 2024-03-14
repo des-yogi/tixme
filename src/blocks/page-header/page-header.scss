@@ -10,10 +10,21 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 10px;
+
+    @media (min-width: $screen-md) {
+      gap: 12px;
+    }
   }
 
   &__title {
     margin: 70px 0;
+  }
+
+  &__service {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
   }
 }

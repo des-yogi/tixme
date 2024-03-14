@@ -1,0 +1,111 @@
+.top-routes {
+  padding-top: 48px;
+  margin-bottom: 70px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin: 0 0 48px;
+    text-align: center;
+  }
+
+  &__row {
+    gap: 48px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__item-title {
+    margin: 0 0 40px;
+  }
+
+  &__table {
+    border-radius: $border-radius;
+    border: none;
+    box-shadow: $shadow;
+
+    tr {
+      position: relative;
+    }
+
+    th,
+    td {
+      vertical-align: baseline;
+      font-size: 20px;
+      font-weight: 500;
+      pointer-events: none;
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    th {
+      padding: 0;
+      color: $text-color;
+    }
+
+    td {
+      position: relative;
+      z-index: 1;
+      padding: 20px 24px 20px 12px;
+      text-align: right;
+      white-space: nowrap;
+      color: $main-color;
+      border-left: none !important;
+
+      span {
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 12px 20px 24px;
+    color: inherit !important;
+    text-decoration: none !important;
+    pointer-events: auto;
+
+    &:hover,
+    &:focus {
+
+      &::after {
+        background-color: $blue-bg--light;
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      //z-index: -1;
+      top: 1px;
+      right: 0;
+      bottom: 1px;
+      left: 0;
+      background-color: transparent;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    span {
+
+      &:first-child {
+        //margin-right: 8px;
+        &::after {
+          display: inline-block;
+          vertical-align: top;
+          content: "→";
+          margin-left: 6px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

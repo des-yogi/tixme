@@ -16,12 +16,62 @@
 
       @@include('blocks/page-header/page-header.html')
 
-      <main role="main">
+      <main class="main">
 
-        <div class="container">
+        @@include('blocks/features/features.html')
 
+        @@include('blocks/top-routes/top-routes.html')
 
+        @@include('blocks/invite/invite.html')
+
+        <div class="container  text-1-col__wrapper">
+          <div class="row">
+            <div class="col-1-1-2">
+              @@include('blocks/text-1-col/text-1-col.html')
+            </div>
+            <div class="col-1-1-2">
+              @@include('blocks/text-1-col/text-1-col.html')
+            </div>
+          </div>
         </div>
+
+        <section class="container  blog-card__wrapper">
+          <h2 class="blog-card__parent-title">Публікації</h2>
+
+          <div class="row  blog-card__row">
+
+            <div class="blog-card__col">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": 'Lorem ipsum dolor sit amet consectetur',
+                "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip…'
+              })
+            </div>
+
+            <div class="blog-card__col">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": 'Lorem ipsum dolor',
+                "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              })
+            </div>
+
+            <div class="blog-card__col">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": 'Lorem ipsum dolor',
+                "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipor.'
+              })
+            </div>
+
+          </div>
+        </section>
+
+        <section class="container  accordion__wrapper">
+          <div class="row">
+            <div class="accordion__col">
+              <h2 class="accordion__parent-title">Часті запитання</h2>
+              @@include('blocks/accordion/accordion.html')
+            </div>
+          </div>
+        </section>
 
       </main>
 
@@ -32,6 +82,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
 
   @@include('_include/page_bottom.html')
 
@@ -68,8 +120,8 @@
           //clearButton: true,
           //format: 'dd.mm.yyyy',
           language: 'uk',
-          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>',
-          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>',
+          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg><span class="visually-hidden">Наступний місяць</span>',
+          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg><span class="visually-hidden">Попередній місяць</span>',
         });
       });
     }
