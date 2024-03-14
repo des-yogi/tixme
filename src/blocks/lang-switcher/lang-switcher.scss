@@ -14,27 +14,52 @@
     font-size: $font-size;
     font-weight: 600;
     text-transform: uppercase;
-    color: $text-color;
+    color: $title-color;
     background-color: transparent;
     border: none;
     user-select: none;
     cursor: pointer;
+    transition: all $transition-time;
 
     &::after {
       width: 24px;
       height: 24px;
       background-size: 24px;
       background-position: center;
-      background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$text-color);
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$title-color);
       border: none;
+      transform:  translateY(-2px);
+      transition: all $transition-time;
 
       @media (max-width: $screen-md - 1) {
         display: none;
       }
     }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+
+      &::after {
+        background-image: svg-load('../blocks/sprite-svg/svg/chevron-down.svg', fill=$main-color);
+      }
+    }
+
+    &[aria-expanded=true] {
+
+      &::after {
+        transform:  translateY(-2px) scale(1, -1);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
   }
 
   &__text {
+    line-height: 1;
 
     @media (max-width: $screen-md - 1) {
       display: none;
@@ -42,20 +67,37 @@
   }
 
   &__list {
-    min-width: 64px;
+    min-width: 72px;
+    width: 100%;
     font-size: $font-size;
     font-weight: 600;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
   }
 
   &__item {
 
     & + & {
-      margin-top: 8px;
+      margin-top: 4px;
     }
   }
 
   &__link {
     //font-size: inherit;
+    padding: 8px;
     font-weight: inherit;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+      background-color: inherit;
+    }
+
+    &:active {
+      color: $link-color--hover;
+    }
   }
 }

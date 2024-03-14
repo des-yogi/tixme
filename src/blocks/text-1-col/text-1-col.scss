@@ -1,0 +1,17 @@
+.text-1-col {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    padding-top: 48px;
+    padding-bottom: 70px;
+
+    & > .row {
+      gap: 48px 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+  }
+}

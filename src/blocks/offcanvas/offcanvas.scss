@@ -1,0 +1,28 @@
+.offcanvas {
+  background-color: $body-bg;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &.offcanvas-start {
+    width: 412px;
+  }
+
+  &__header,
+  &__body {
+    padding: 16px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body {
+
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

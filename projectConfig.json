@@ -25,7 +25,16 @@
     "typo": [],
     "selection-form": [],
     "spec-select": [],
-    "datepicker": []
+    "datepicker": [],
+    "offcanvas": [],
+    "user-btn": [],
+    "features": [],
+    "top-routes": [],
+    "invite": [],
+    "text-1-col": [],
+    "blog-card": [],
+    "accordion": [],
+    "social-links": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",
