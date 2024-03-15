@@ -8,7 +8,59 @@
 
 <footer class="page-footer">
 
-  <div class="container  page-footer__main"></div>
+  <div class="container  page-footer__main">
+    <div class="row  page-footer__row">
+
+      <div class="page-footer__logo-col">
+        <a href="index.html" class="logo  logo--footer" title="TixMe">
+          <img src="img/tixme-logo.svg" alt="TixMe logo" width="180" height="40" loading="lazy">
+        </a>
+      </div>
+
+      <section class="page-footer__info-col">
+        <h3 class="h5  page-footer__sect-title">Інформація</h3>
+        <nav class="page-footer__nav">
+          <ul class="list-nostyled  page-footer__nav-list">
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Про нас</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Контакти</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__nav-link">Повернення квитків</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="page-footer__docs-col">
+        <h3 class="h5  page-footer__sect-title">Документи</h3>
+        <ul class="list-nostyled  page-footer__nav-list">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Публічна оферта</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Політики конфіденційності</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-footer__tel-col">
+        <h3 class="visually-hidden">Контакти</h3>
+        <a href="tel:+380954444444" class="h5  page-footer__sect-title  page-footer__tel">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tel"></use></svg>
+          <span>+38 095 444 44 44</span>
+        </a>
+        <p class="page-footer__add-text">З питань придбання, обміну та повернення квитків, будь ласка, звертайтесь до служби підтримки з 09:00 до 21:00</p>
+      </section>
+
+      <div class="page-footer__soc-col">
+        @@include('../../blocks/social-links/social-links.html')
+      </div>
+
+    </div>
+  </div>
 
   <div class="container  page-footer__bottom">
     <p>© 2024 TixMe. Всі права захищені.</p>
