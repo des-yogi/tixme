@@ -2,7 +2,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 
   img {
     display: block;
@@ -10,6 +11,14 @@
     height: 32px;
 
     @media (min-width: $screen-md) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+
+  &--footer {
+
+    img {
       width: 180px;
       height: 40px;
     }

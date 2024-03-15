@@ -34,7 +34,8 @@
     "text-1-col": [],
     "blog-card": [],
     "accordion": [],
-    "social-links": []
+    "social-links": [],
+    "pending-response": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",

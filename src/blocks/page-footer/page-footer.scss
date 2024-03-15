@@ -3,6 +3,114 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__row {
+    gap: 24px 0;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      gap: 40px 0;
+    }
+  }
+
+  &__logo-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      order: -2;
+    }
+  }
+
+  &__info-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2);
+  }
+
+  &__docs-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2);
+  }
+
+  &__tel-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 3);
+  }
+
+  &__soc-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 2);
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      order: -1;
+    }
+  }
+
+  &__sect-title {
+
+    &.h5 {
+      margin-top: 0;
+    }
+  }
+
+  &__nav {
+
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+  }
+
+  &__nav-item {
+
+  }
+
+  &__nav-link {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 4px 0;
+    font-size: $font-size-sm;
+    text-decoration: none !important;
+    color: $title-color;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
+
+  &__tel {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none !important;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+
+    svg {
+      fill: $link-color;
+    }
+  }
+
+  &__add-text {
+    margin-top: 0;
+    font-size: $font-size-sm;
+    color: $title-color;
+  }
+
   &__bottom {
     padding-top: 8px;
     padding-bottom: 8px;
