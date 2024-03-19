@@ -1,0 +1,239 @@
+<!--DEV
+@ @include('blocks/result-card/result-card.html', {
+  "index": "1"
+})
+-->
+
+<article class="result-card">
+  <h2 class="visually-hidden">Картка рейсу</h2>
+
+  <div class="result-card__main">
+
+    <div class="result-card__main-info">
+
+      <section class="result-card__dispatch">
+        <h3 class="visually-hidden">Дата і час відправлення</h3>
+        <div class="result-card__date">
+          <time datetime="2024-01-27T13:30" class="visually-hidden"></time>
+          <p class="h3  result-card__date-str">
+            13:30 <span>27 Січ</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="result-card__travel-time">
+        <h3 class="visually-hidden">Час у дорозі</h3>
+        <p class="result-card__time">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clock"></use></svg>
+          <time datetime="PT8H30M">08г 30хв</time>
+        </p>
+      </section>
+
+      <section class="result-card__arrival">
+        <h3 class="visually-hidden">Дата і час прибуття</h3>
+        <div class="result-card__date">
+          <time datetime="2024-01-27T22:00" class="visually-hidden"></time>
+          <p class="h3  result-card__date-str">
+            22:00 <span>27 Січ</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="result-card__dispatch-info">
+        <h3 class="visually-hidden">Додаткова інформація про пункт відправлення: пункт відправлення, адреса тощо</h3>
+        <p class="h5  result-card__location">Кам’янець-Подільський</p>
+        <p class="result-card__add-info">Автовокзал “Кам'янець-Подільський”, вулиця Князів Коріатовичів, буд. 19</p>
+      </section>
+
+      <section class="result-card__dispatch-info  result-card__dispatch-info--to">
+        <h3 class="visually-hidden">Додаткова інформація про пункт прибуття: пункт прибуття, адреса тощо</h3>
+        <p class="h5  result-card__location">Хмельницький</p>
+        <p class="result-card__add-info">Автовокзал "Центральний", Вінницьке шосе, буд. 23</p>
+      </section>
+
+      <section class="result-card__transporter">
+        <h3 class="result-card__transporter-cap">Перевізник: <span>BTA BUS Васильківтранс</span></h3>
+      </section>
+
+    </div>
+
+    <section class="result-card__main-action">
+      <h3 class="visually-hidden">Ціна поїздки та бронювання місця</h3>
+      <p class="result-card__price">
+        <span class="result-card__price-cap">Ціна:</span>
+        <span class="result-card__sume">1000</span> UAH
+        <span class="result-card__seats">За 2 пасажирів</span>
+      </p>
+      <a href="#" class="btn  result-card__reserve">
+        <span>Забронювати</span>
+      </a>
+    </section>
+
+  </div>
+
+  <section class="result-card__footer">
+    <h2 class="visually-hidden">Деталізована інформація про рейс</h2>
+
+    <div class="result-card__ctrl">
+      <button class="result-card__more-btn" data-bs-toggle="collapse" data-bs-target="#result-card-adds-@@index" aria-expanded="false" aria-controls="result-card-adds-@@index">
+        <span>Деталі рейсу</span>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-down"></use></svg>
+      </button>
+      <p class="result-card__transplant">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus"></use></svg>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus"></use></svg>
+        <span>1 пересадка</span>
+      </p>
+    </div>
+
+    <div id="result-card-adds-@@index" class="collapse  result-card__expandable" data-bs-parent="#tickets">
+
+      <section class="result-card__extend-info">
+        <h3 class="visually-hidden">Додаткова інформація</h3>
+
+        <div class="result-card__flight">
+          <p class="result-card__ext-subtitle">Кам’янець-Подільський - Хмельницький</p>
+          <p class="result-card__ext-descr">Рейс: 186158 [UA-UA]</p>
+        </div>
+
+        <div class="result-card__terms">
+          <div class="result-card__terms-col">
+            <p class="result-card__ext-subtitle">Перевізник</p>
+            <p class="result-card__ext-descr">“Павлюк Віталій Іванович” ФОП, Автобус: SETRA</p>
+            <p class="result-card__ext-descr">Тип рейсу: Регулярний</p>
+          </div>
+
+          <div class="result-card__terms-col">
+            <p class="result-card__ext-subtitle">Умови перевізника</p>
+            <div class="result-card__ext-icons">
+              <svg width="32" height="32" role="img" aria-label="Кава"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#coffee"></use></svg>
+              <svg width="32" height="32" role="img" aria-label="Відео"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tv"></use></svg>
+              <svg width="32" height="32" role="img" aria-label="Wi-Fi"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wifi"></use></svg>
+              <svg width="32" height="32" role="img" aria-label="Заряджання гаджетів"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#battery"></use></svg>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="result-card__bottom-wrapper">
+
+        <section class="result-card__route">
+          <h3 class="visually-hidden">Маршрут руху із зупинками та пунктами пересадки</h3>
+
+          <ul class="list-nostyled  result-card__route-list">
+            <li class="result-card__route-item">
+              <span class="result-card__route-time">13:30</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Київ</span>
+                <span class="result-card__route-info">Автовокзал, пр. Науки, 1/2</span>
+              </span>
+            </li>
+
+            <li class="result-card__route-item">
+              <span class="result-card__route-time">13:50</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Київ</span>
+                <span class="result-card__route-info">Автостанція “Київ”, вул. С.Петлюри, 32 (залізничний вокзал)</span>
+              </span>
+            </li>
+
+            <li class="result-card__route-item">
+              <span class="result-card__route-time">15:00</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Житомир</span>
+                <span class="result-card__route-info">Автовокзал, вул. Київська, 93</span>
+              </span>
+            </li>
+
+            <li class="result-card__route-item  result-card__route-item--transfer">
+              <span class="result-card__route-time">16:20</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Пересадка</span>
+                <span class="result-card__route-info">Тривалість пересадки: 1год 00хв</span>
+              </span>
+            </li>
+
+            <li class="result-card__route-item">
+              <span class="result-card__route-time">18:30</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Рівне</span>
+                <span class="result-card__route-info">Автовокзал, вул. Київська, 40</span>
+              </span>
+            </li>
+            <li class="result-card__route-item">
+              <span class="result-card__route-time">00:00</span>
+              <span class="result-card__route-stop">
+                <span class="result-card__route-city">Львів</span>
+                <span class="result-card__route-info">Автовокзал “Двірцевий”, площа Двірцева, 1</span>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="result-card__services">
+          <h3 class="visually-hidden">Умови та додаткові послуги</h3>
+
+          <section class="result-card__service">
+            <h4 class="result-card__service-title">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#refund"></use></svg>
+              <span>Умови повернення</span>
+            </h4>
+            <ul class="list-nostyled  result-card__service-list">
+              <li class="result-card__service-item">
+                До 48год. до від’їзду: 720грн
+              </li>
+              <li class="result-card__service-item">
+                Від 48год. до 24год. до від’їзду: 640грн
+              </li>
+              <li class="result-card__service-item">
+                Менше 24годин до від’їзду: квиток не повертаються
+              </li>
+            </ul>
+          </section>
+
+          <section class="result-card__service">
+            <h4 class="result-card__service-title">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#luggage"></use></svg>
+              <span>Багаж</span>
+            </h4>
+            <ul class="list-nostyled  result-card__service-list">
+              <li class="result-card__service-item">
+                2 од. до 30кг (60*40*20) і ручна поклажа - безкоштовно
+              </li>
+              <li class="result-card__service-item">
+                Додатковий багаж за погодженням з перевізником
+              </li>
+            </ul>
+          </section>
+
+          <section class="result-card__service">
+            <h4 class="result-card__service-title">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#info"></use></svg>
+              <span>Додаткова інформація</span>
+            </h4>
+            <ul class="list-nostyled  result-card__service-list">
+              <li class="result-card__service-item">
+                Можлива пересадка на рейсі
+              </li>
+              <li class="result-card__service-item">
+                Квиток можна не роздруковувати
+              </li>
+              <li class="result-card__service-item">
+                Перевезення тварин заборонено
+              </li>
+              <li class="result-card__service-item">
+                Особи до 18 років можуть подорожувати лише у супроводі батьків чи опікунів
+              </li>
+            </ul>
+          </section>
+
+
+        </section>
+      </div>
+
+    </div>
+  </section>
+
+</article>

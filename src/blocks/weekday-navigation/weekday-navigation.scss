@@ -1,0 +1,56 @@
+.weekday-navigation {
+  margin-top: -20px;
+  background-color: $blue-bg;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    //width: 150px;
+
+    &.active {
+
+      #{$block-name}__link {
+        background-color: $white;
+        border-top-right-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+      }
+
+      #{$block-name}__date {
+        font-weight: 600;
+        color: $link-color;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 24px;
+    color: $title-color;
+    user-select: none;
+
+    @media (min-width: $screen-lg) {
+      padding: 12px 32px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $link-color;
+    }
+  }
+
+  // &__date {
+
+  // }
+
+  // &__weekday {
+
+  // }
+}
+
+.tns-inner {
+  height: auto !important;
+}
