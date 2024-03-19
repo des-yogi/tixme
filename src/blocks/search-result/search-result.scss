@@ -1,0 +1,32 @@
+.search-result {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__info {
+    font-size: 20px;
+    font-weight: 500;
+    color: $title-color;
+  }
+
+  &__body {
+    padding-top: 48px;
+    padding-bottom: 70px;
+  }
+
+  &__card-wrapper {
+
+    & > * + * {
+      margin-top: 24px;
+    }
+  }
+}

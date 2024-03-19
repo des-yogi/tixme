@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Результати пошуку</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="container  page-header">
+
+        <div class="page-header__inner">
+          @@include('blocks/logo/logo.html')
+
+          <div class="page-header__service">
+            @@include('blocks/user-btn/user-btn.html')
+
+            @@include('blocks/lang-switcher/lang-switcher.html')
+
+            @@include('blocks/burger/burger.html')
+          </div>
+        </div>
+
+        @@include('blocks/selection-form/selection-form.html')
+
+      </header>
+
+      <main class="main">
+
+        <section class="container  weekday-navigation">
+          <h2 class="visually-hidden">Вибір найближчих дат ???</h2>
+
+          <div id="weekday" class="weekday-navigation__inner">
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">27.01</span>
+                <span class="weekday-navigation__weekday">Сб</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item  active">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">28.01</span>
+                <span class="weekday-navigation__weekday">Нд</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">29.01</span>
+                <span class="weekday-navigation__weekday">Пн</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">30.01</span>
+                <span class="weekday-navigation__weekday">Вт</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">31.01</span>
+                <span class="weekday-navigation__weekday">Ср</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">01.02</span>
+                <span class="weekday-navigation__weekday">Чт</span>
+              </a>
+            </div>
+            <div class="weekday-navigation__item">
+              <a href="#" class="weekday-navigation__link">
+                <span class="weekday-navigation__date">02.02</span>
+                <span class="weekday-navigation__weekday">Пт</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="container  search-result">
+
+          <div class="search-result__header">
+            <h1 class="search-result__title">
+              Квитки на автобус:
+              <span>Кам’янець-Подільський - Львів</span>
+            </h1>
+            <p class="search-result__info">
+              Виїзд та прибуття за місцевим часом
+            </p>
+          </div>
+
+          <div class="search-result__body">
+
+            <div class="search-result__controls"></div>
+
+            <div id="tickets" class="search-result__card-wrapper">
+
+              @@include('blocks/result-card/result-card.html', {
+                "index": "1"
+              })
+
+              @@include('blocks/result-card/result-card.html', {
+                "index": "2"
+              })
+
+              @@include('blocks/result-card/result-card.html', {
+                "index": "3"
+              })
+
+              @@include('blocks/result-card/result-card.html', {
+                "index": "4"
+              })
+
+              @@include('blocks/result-card/result-card.html', {
+                "index": "5"
+              })
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+  <script>
+    const selArr = document.querySelectorAll('.spec-select');
+    if (selArr) {
+      selArr.forEach(function(item) {
+        new SlimSelect({
+          select: item
+        })
+      });
+    }
+
+    const datePickerArr = document.querySelectorAll('.date');
+
+    (function () {
+      Datepicker.locales.uk = {
+        days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+        daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+        monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+        today: "Сьогодні",
+        clear: "Очистити",
+        format: "dd.mm.yyyy",
+        weekStart: 1
+      };
+    }());
+
+    if (datePickerArr) {
+      datePickerArr.forEach(function(item) {
+        new Datepicker(item, {
+          autohide: true,
+          //clearButton: true,
+          //format: 'dd.mm.yyyy',
+          language: 'uk',
+          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg><span class="visually-hidden">Наступний місяць</span>',
+          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg><span class="visually-hidden">Попередній місяць</span>',
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

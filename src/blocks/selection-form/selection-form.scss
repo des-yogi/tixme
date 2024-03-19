@@ -1,12 +1,8 @@
 .selection-form {
+  margin-top: 70px;
   padding-bottom: calc(70px + -24px);
 
   $block-name:                &; // #{$block-name}__element
-
-  &__inner {
-    //padding: 12px;
-    //background-color: $main-color;
-  }
 
   &__nav {
     display: flex;
