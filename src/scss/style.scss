@@ -12,6 +12,7 @@
 @import '../../node_modules/bootstrap/scss/_dropdown';
 @import '../../node_modules/bootstrap/scss/_modal';
 @import '../../node_modules/bootstrap/scss/_offcanvas';
+@import '../../node_modules/bootstrap/scss/_tooltip';
 @import '../../node_modules/tiny-slider/dist/tiny-slider.css';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
@@ -54,4 +55,13 @@
 @import './src/blocks/weekday-navigation/weekday-navigation.scss';
 @import './src/blocks/search-result/search-result.scss';
 @import './src/blocks/result-card/result-card.scss';
+@import './src/blocks/main-menu/main-menu.scss';
+@import './src/blocks/seat-choosing/seat-choosing.scss';
+@import './src/blocks/seat-choosing-form/seat-choosing-form.scss';
+@import './src/blocks/passenger-info/passenger-info.scss';
+@import './src/blocks/contacts-info/contacts-info.scss';
+@import './src/blocks/summary/summary.scss';
+@import './src/blocks/attention/attention.scss';
+@import './src/blocks/seat-btn/seat-btn.scss';
+@import './src/blocks/form-section/form-section.scss';
 @import './src/scss/print.scss';

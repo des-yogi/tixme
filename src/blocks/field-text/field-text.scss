@@ -28,6 +28,10 @@
     border-radius: $border-radius;
     appearance: textfield;
 
+    &:hover {
+      border-color: $link-color--hover;
+    }
+
     &:focus {
       @include field-focus;
     }
@@ -65,10 +69,32 @@
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;
     }
+
+    &--required {
+      padding-right: 32px;
+      background-size: 7px;
+      background-repeat: no-repeat;
+      background-position: top 22px right 16px;
+      background-image: svg-load('../blocks/field-text/bg-img/asterisk.svg', fill=$accent-color--hover);
+    }
   }
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--error {
+
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+      //background-color: lighten($color-danger, 35%);
+    }
   }
 
   &--small {

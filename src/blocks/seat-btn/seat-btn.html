@@ -1,0 +1,13 @@
+<!--DEV
+@ @include('blocks/seat-btn/seat-btn.html', {
+  "idx": "01",
+  "classSpec": "seat-btn--disabled",
+  "isHidden": "hidden",
+  "state": "disabled"
+})
+-->
+
+<label class="seat-btn  @@classSpec" @@isHidden>
+  <input class="visually-hidden  seat-btn__input " type="checkbox" name="seat-@@idx" value="@@idx" @@state>
+  <span class="seat-btn__text">@@idx</span>
+</label>

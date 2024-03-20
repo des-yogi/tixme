@@ -1,6 +1,9 @@
 (function () {
+  const container = document.getElementById('weekday');
+  if (!container) return;
+
   const weekday = tns({
-    container: '#weekday',
+    container: container,
     //autoplay: true
     items: 3,
     slideBy: 'page',

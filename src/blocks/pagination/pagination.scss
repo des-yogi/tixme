@@ -1,17 +1,13 @@
-$line-height:                 1.375em !default;
-$text-color:                  hsl(0, 0%, 10%) !default;
-$border-color:                hsl(0, 0%, 60%) !default;
-
 .pagination {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 18px;
+  //margin-top: 18px;
   //margin-bottom: 60px;
 
   @media (min-width: $screen-md) {
     //justify-content: flex-start;
-    margin-top: 20px;
+    //margin-top: 20px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -25,7 +21,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
   }
 
   &__item {
-    margin-right: 0.5em;
+    margin-right: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -34,7 +30,9 @@ $border-color:                hsl(0, 0%, 60%) !default;
     &.active {
 
       a {
-        color: $main-color;
+        text-decoration: none;
+        color: $white;
+        background-color: $main-color;
         pointer-events: none;
       }
     }
@@ -54,14 +52,19 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
       #{$block-name}__link {
         transform: scale(-1, 1);
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$title-color);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        }
+
+        &:active {
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$main-color);
         }
 
         &--disabled {
+          background-color: $border-color;
           background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
         }
       }
@@ -71,14 +74,19 @@ $border-color:                hsl(0, 0%, 60%) !default;
       //margin-left: 20px;
 
       #{$block-name}__link {
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$title-color);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        }
+
+        &:active {
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$main-color);
         }
 
         &--disabled {
+          background-color: $border-color;
           background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
         }
       }
@@ -89,24 +97,26 @@ $border-color:                hsl(0, 0%, 60%) !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
     white-space: nowrap;
-    color: $text-muted;
+    color: $title-color;
     background-color: $white;
-    border-radius: 0;
+    border-radius: $border-radius;
     transition: all 0.2s ease-out;
 
     &:hover,
     &:focus {
-      text-decoration: none;
-      color: $white;
-      background-color: $main-color;
+      color: $text-color;
+    }
+
+    &:active {
+      color: $main-color;
     }
 
     &--disabled,

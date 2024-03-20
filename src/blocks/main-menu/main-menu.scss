@@ -1,0 +1,21 @@
+.main-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+
+    &.active {
+
+      #{$block-name}__link {
+        color: $link-color;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px;
+    text-decoration: none !important;
+    color: $title-color;
+  }
+}
