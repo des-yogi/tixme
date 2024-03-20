@@ -1,6 +1,10 @@
 .search-result {
-  padding-top: 70px;
+  padding-top: 48px;
   padding-bottom: 70px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -21,6 +25,10 @@
   &__body {
     padding-top: 48px;
     padding-bottom: 70px;
+  }
+
+  &__controls {
+    margin-bottom: 48px;
   }
 
   &__card-wrapper {

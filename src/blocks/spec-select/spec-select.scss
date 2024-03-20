@@ -60,7 +60,8 @@
   &__wrapper {
 
     @media (min-width: $screen-md) {
-      flex: 1 1 auto;
+      flex: 1 1;
+      flex-basis: calc(50% - 32px);
     }
 
     &--date {

@@ -11,6 +11,7 @@
     min-height: 48px;
     min-width: 48px;
     padding: 0;
+    font-family: $font-family;
     font-size: $font-size;
     font-weight: 600;
     text-transform: uppercase;
@@ -79,7 +80,16 @@
   &__item {
 
     & + & {
-      margin-top: 4px;
+      //margin-top: 4px;
+      border-top: 1px solid $border-color;
+    }
+
+    &.active {
+
+      #{$block-name}__link {
+        color: $link-color;
+        pointer-events: none;
+      }
     }
   }
 
@@ -88,6 +98,7 @@
     padding: 8px;
     font-weight: inherit;
     text-align: center;
+    text-decoration: none !important;
     text-transform: uppercase;
 
     &:hover,

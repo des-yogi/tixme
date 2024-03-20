@@ -28,6 +28,9 @@
     box-shadow: $shadow;
 
     tr {
+      display: flex;
+      //align-items: baseline;
+      justify-content: space-between;
       position: relative;
     }
 
@@ -45,11 +48,13 @@
     }
 
     th {
+      flex: 1 1 auto;
       padding: 0;
       color: $text-color;
     }
 
     td {
+      flex: 0 0 auto;
       position: relative;
       z-index: 1;
       padding: 20px 24px 20px 12px;

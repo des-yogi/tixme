@@ -1,0 +1,8 @@
+.seat-choosing {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    padding-top: 48px;
+  }
+}

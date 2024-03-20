@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  //margin-bottom: 32px;
 
   &__name {
     @include field-name;
@@ -17,20 +17,22 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    min-height: 56px;
+    padding: 0 10px 0 $field-padding-horizontal;
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
     line-height: inherit;
+    appearance: none;
+    color: $text-muted;
+    background-color: $white;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    appearance: none;
-    color: $title-color;
-    background-color: $white;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 20px;
+    //box-shadow: $shadow;
+    //background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
+    //background-repeat: no-repeat;
+    //background-position: right 12px center;
+    //background-size: 20px;
 
     &[multiple] {
       background-image: none;
@@ -56,6 +58,65 @@
       color: $text-muted;
       border-color: $text-muted;
       background-color: $white;
+    }
+
+    &.ss-main {
+      display: flex;
+
+      .ss-values {
+        padding-right: 10px;
+      }
+    }
+
+    &.ss-content {
+      padding: 8px 0;
+      margin-top: 5px !important;
+      box-shadow: $shadow;
+      border: none;
+
+      .ss-option {
+        padding: 8px 16px;
+
+        &:hover,
+        &:focus,
+        &.ss-highlighted {
+          color: inherit;
+          background-color: $blue-bg--light;
+        }
+
+        &:active {
+          background-color: $blue-bg;
+        }
+
+        &.ss-selected {
+          color: $text-color !important;
+          background-color: $blue-bg !important;
+        }
+
+        &.ss-selected.ss-disabled {
+          background-color: $input-bg--disabled !important;
+
+          &:hover,
+          &:focus {
+            background-color: $input-bg--disabled !important;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    &--required {
+
+      &.ss-main {
+
+        .ss-values {
+          padding-right: 28px;
+          background-size: 7px;
+          background-repeat: no-repeat;
+          background-position: top 22px right 10px;
+          background-image: svg-load('../blocks/field-text/bg-img/asterisk.svg', fill=$accent-color--hover);
+        }
+      }
     }
   }
 
