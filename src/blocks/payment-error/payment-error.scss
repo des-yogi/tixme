@@ -1,0 +1,21 @@
+.payment-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin: 0;
+  }
+
+  .btn {
+
+    @media (max-width: $screen-md - 1) {
+      width: 100%;
+    }
+  }
+}

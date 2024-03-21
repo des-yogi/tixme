@@ -47,7 +47,10 @@
     "summary": [],
     "attention": [],
     "seat-btn": [],
-    "form-section": []
+    "form-section": [],
+    "tickets-ready": [],
+    "payment-error": [],
+    "error-404": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",

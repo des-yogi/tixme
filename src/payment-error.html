@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Помилка</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="container  page-header">
+
+        <div class="page-header__inner">
+          @@include('blocks/logo/logo.html')
+
+          <div class="page-header__service">
+            @@include('blocks/user-btn/user-btn.html')
+
+            @@include('blocks/lang-switcher/lang-switcher.html')
+
+            @@include('blocks/burger/burger.html')
+          </div>
+        </div>
+
+        <p class="display  page-header__title">Квитки на автобус <br> по Україні, Польщі та Європі</p>
+
+        @@include('blocks/selection-form/selection-form.html')
+
+      </header>
+
+      <main class="main">
+
+        <div class="container  payment-error">
+
+          <h1 class="payment-error__title">Під час оплати сталася помилка :(</h1>
+
+          <img src="img/payment-error.svg" alt="" width="380" height="373">
+
+          <a href="#" class="btn  btn--cta">
+            <span>Повернутись до оплати</span>
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+          </a>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('_include/page_bottom.html')
+
+  <script>
+    const selArr = document.querySelectorAll('.spec-select');
+    if (selArr) {
+      selArr.forEach(function(item) {
+        new SlimSelect({
+          select: item
+        })
+      });
+    }
+
+    const selArrStd = document.querySelectorAll('.field-select__select');
+    if (selArrStd) {
+      selArrStd.forEach(function(item) {
+        new SlimSelect({
+          select: item,
+          settings: {
+            showSearch: false
+          }
+        })
+      });
+    }
+
+    const datePickerArr = document.querySelectorAll('.date');
+
+    (function () {
+      Datepicker.locales.uk = {
+        days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+        daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+        monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+        today: "Сьогодні",
+        clear: "Очистити",
+        format: "dd.mm.yyyy",
+        weekStart: 1
+      };
+    }());
+
+    if (datePickerArr) {
+      datePickerArr.forEach(function(item) {
+        new Datepicker(item, {
+          autohide: true,
+          //clearButton: true,
+          //format: 'dd.mm.yyyy',
+          language: 'uk',
+          nextArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg><span class="visually-hidden">Наступний місяць</span>',
+          prevArrow: '<svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg><span class="visually-hidden">Попередній місяць</span>',
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

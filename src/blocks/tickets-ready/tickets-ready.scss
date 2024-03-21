@@ -1,0 +1,81 @@
+.tickets-ready {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    width: auto;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px 0;
+    padding: 48px 24px;
+    background-color: $body-bg;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-md) {
+      max-width: 690px;
+      padding: 48px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 590px;
+    }
+  }
+
+  &__card-title {
+    margin: 0;
+  }
+
+  &__text {
+    font-size: $font-size--h5;
+    font-weight: 500;
+
+    p {
+      display: flex;
+      //flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 12px;
+
+      svg {
+        flex: 0 0 24px;
+        transform: translateY(3px);
+        fill: $link-color;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      max-width: 690px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 590px;
+    }
+
+    & > * {
+      flex: 1 1 100%;
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+        min-width: 240px;
+      }
+    }
+  }
+}
