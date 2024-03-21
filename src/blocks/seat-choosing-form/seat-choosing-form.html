@@ -20,504 +20,507 @@
     </li>
   </ul>
 
-  <section class="seat-choosing-form__bus-seats">
-    <h3 class="visually-hidden">Схема розташування місць в автобусі</h3>
+  <div class="seat-choosing-form__bus-seats">
 
     <form class="seat-choosing-form__form" action="#" method="post">
 
-      <fieldset class="seat-choosing-form__fieldset">
-        <legend class="visually-hidden">Вибір місця в автобусі</legend>
+      <div class="seat-choosing-form__scheme-wrapper">
+        <fieldset class="seat-choosing-form__fieldset">
+          <legend class="visually-hidden">Схема розташування місць в автобусі</legend>
 
-        <div class="seat-choosing-form__grid">
+          <div class="seat-choosing-form__grid  ">
+            <!-- .col-7, .col-14 -->
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "В1",
-              "classSpec": "seat-btn--disabled",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "4c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "8c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "12c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "16c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "20C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "b2",
-              "classSpec": "seat-btn--disabled",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "28c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "32c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "36c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "44C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "42c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "В1",
+                "classSpec": "seat-btn--disabled",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "4c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "8c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "12c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "16c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "20C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "b2",
+                "classSpec": "seat-btn--disabled",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "28c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "32c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "36c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "44C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "42c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "3c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "7c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "11C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "15C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "19c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "27c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "3c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "7c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "11C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "15C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "19c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "27c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "31C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "35C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "43c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "41c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "31C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "35C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "43c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "41c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "0",
-              "classSpec": "",
-              "isHidden": "hidden",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "2c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "6c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "10c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "14C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "18C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "22c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "24c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "26c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "30C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "checked"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "34C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "38c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
 
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "ВД",
-              "classSpec": "seat-btn--disabled",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "1c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "5C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "9C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "13с",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "17c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "21c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "23C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "25C",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "29c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "33c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": "disabled"
-            })
-          </div>
-          <div class="seat-choosing-form__cell">
-            @@include('../../blocks/seat-btn/seat-btn.html', {
-              "idx": "37c",
-              "classSpec": "",
-              "isHidden": "",
-              "state": ""
-            })
-          </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "0",
+                "classSpec": "",
+                "isHidden": "hidden",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "2c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "6c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "10c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "14C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "18C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "22c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "24c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "26c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "30C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "checked"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "34C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "38c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
 
-        </div>
-      </fieldset>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "ВД",
+                "classSpec": "seat-btn--disabled",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "1c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "5C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "9C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "13с",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "17c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "21c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "23C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "25C",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "29c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "33c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": "disabled"
+              })
+            </div>
+            <div class="seat-choosing-form__cell">
+              @@include('../../blocks/seat-btn/seat-btn.html', {
+                "idx": "37c",
+                "classSpec": "",
+                "isHidden": "",
+                "state": ""
+              })
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
 
       <div class="seat-choosing-form__fieldset-wrapper">
 
@@ -698,5 +701,6 @@
       </div>
     </form>
 
-  </section>
+  </div>
+
 </section>
