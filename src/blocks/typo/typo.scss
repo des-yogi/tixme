@@ -225,9 +225,33 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
+  position: relative;
+  padding: 64px 24px 24px;
+  margin: 16px 0;
+  color: $text-color;
+  background-color: $blue-bg;
+  border-radius: $border-radius;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg-load('../blocks/sprite-svg/svg/quote.svg', fill=$text-color);
+  }
+
+  footer {
+
+    p {
+      font-weight: 700;
+    }
+  }
 }
 
 dt {
@@ -285,19 +309,23 @@ pre {
 }
 
 // Вложенные упорядоченные списки: 1, 2, 3, 3.1 -> 3.1.1, 3.1.2…
-/* ol {
-  list-style: none;
-  counter-reset: something;
-  padding-left: 32px;
+// ol {
+//   list-style: none;
+//   counter-reset: something;
+//   padding-left: 0;
 
-  li {
-    counter-increment: something;
+//   & ol {
+//     padding-left: 24px;
+//   }
 
-    &::before {
-      content: counters(something, ".") ". ";
-    }
-  }
-} */
+//   li {
+//     counter-increment: something;
+
+//     &::before {
+//       content: counters(something, ".") ". ";
+//     }
+//   }
+// }
 
 a {
   text-decoration-skip-ink: inherit;
