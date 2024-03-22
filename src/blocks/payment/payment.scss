@@ -1,0 +1,165 @@
+.payment {
+  padding-top: 48px;
+  padding-bottom: 70px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 96px;
+  }
+
+  &__top {
+    gap: 40px 0;
+    margin-bottom: 70px;
+  }
+
+  &__caption-col {
+    @include col(xs, 12);
+    @include col(md, 8);
+    @include col(xl, 7);
+  }
+
+  &__countdown-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: $screen-md - 1) {
+      align-items: flex-start;
+    }
+  }
+
+  &__form-col,
+  &__info-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 7);
+
+    @media (min-width: $screen-xl) {
+      padding-right: 64px;
+    }
+  }
+
+  &__form-col,
+  &__card-col {
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__form-col {
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__card-col,
+  &__logo-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 5);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__card-col {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 486px;
+      //height: 309px;
+    }
+  }
+
+  &__logo-col {
+
+    @media (min-width: $screen-xl) {
+      order: 1;
+    }
+  }
+
+  &__info-col {
+
+  }
+
+  &__caption {
+    margin-bottom: 16px;
+  }
+
+  &__warning {
+    color: $title-color;
+  }
+
+  &__countdown-text {
+    margin-top: 5px;
+    font-size: $font-size--h5;
+    font-weight: 500;
+    text-align: right;
+    color: $main-color;
+  }
+
+  &__body {
+    margin-bottom: 70px;
+  }
+
+  &__form {
+
+  }
+
+  &__radio-group {
+
+  }
+
+  &__total {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 32px 0 24px;
+    font-size: $font-size--h3;
+    font-weight: 600;
+  }
+
+  &__checkbox-wrapper {
+
+  }
+
+  &__card {
+
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+
+    & > * {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__info {
+    font-size: $font-size-sm;
+    color: $title-color;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+  }
+}

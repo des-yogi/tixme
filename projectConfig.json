@@ -50,7 +50,10 @@
     "form-section": [],
     "tickets-ready": [],
     "payment-error": [],
-    "error-404": []
+    "error-404": [],
+    "text-doc": [],
+    "payment": [],
+    "countdown": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",

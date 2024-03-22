@@ -1,0 +1,31 @@
+.text-doc {
+  padding-top: 48px;
+  padding-bottom: 70px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include col(xs, 12);
+    @include col(lg, 10);
+    @include col(xl, 8);
+  }
+
+  &__header {
+    margin-bottom: 112px;
+  }
+
+  &__content {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $title-color;
+    }
+  }
+}
