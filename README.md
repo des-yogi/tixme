@@ -12,3 +12,4 @@ Ticketing service
 * https://des-yogi.github.io/tixme/user-orders
 * https://des-yogi.github.io/tixme/order-page
 * https://des-yogi.github.io/tixme/order-page-empty
+* https://des-yogi.github.io/tixme/publications
