@@ -78,9 +78,9 @@
       //border-color: darken($color-main, 12%);
     }
 
-    &:active {
-      background-color: $main-color;
-    }
+    // &:active {
+    //   background-color: $main-color;
+    // }
 
     &--disabled,
     &:disabled {
@@ -109,8 +109,31 @@
       background-color: transparent;
     }
 
-    &:active {
-      color: $accent-color--hover;
+    // &:active {
+    //   color: $accent-color--hover;
+    // }
+  }
+
+  &--no-bg {
+    color: $title-color;
+    background-color: $white;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+      background-color: $white;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: $white;
+      cursor: not-allowed;
+
+      @at-root a.btn--disabled {
+        pointer-events: none;
+      }
     }
   }
 }
