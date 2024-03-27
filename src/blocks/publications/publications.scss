@@ -1,0 +1,20 @@
+.publications {
+  padding-top: 48px;
+  padding-bottom: 70px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__row {
+    gap: 48px 0;
+    padding-top: 48px;
+    padding-bottom: 70px;
+  }
+}

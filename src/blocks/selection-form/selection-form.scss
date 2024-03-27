@@ -67,6 +67,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__fields-group {

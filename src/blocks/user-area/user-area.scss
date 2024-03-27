@@ -221,4 +221,11 @@
       }
     }
   }
+
+  &__config-wrapper {
+
+    & > * + * {
+      margin-top: 24px;
+    }
+  }
 }

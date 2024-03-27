@@ -1,5 +1,4 @@
 .spec-select {
-  //height: 24px;
   box-sizing: border-box;
   padding: 0 4px;
   font-size: 16px;
@@ -9,6 +8,7 @@
   $block-name:                &; // #{$block-name}__element
 
   &.ss-main {
+    height: 30px;
     border-radius: $border-radius;
 
     &:focus {
