@@ -29,6 +29,21 @@
 
   &__controls {
     margin-bottom: 48px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    & > * {
+
+      @media (min-width: $screen-md) {
+        flex: 0 1 33.3333%;
+      }
+    }
   }
 
   &__card-wrapper {

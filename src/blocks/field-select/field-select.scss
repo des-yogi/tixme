@@ -123,4 +123,22 @@
   &__help-text {
     @include field-help-text;
   }
+
+  &--icon {
+
+    #{$block-name}__select {
+      padding-left: 50px;
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center left 16px;
+      box-shadow: $shadow;
+    }
+
+    &--sort {
+
+      #{$block-name}__select {
+        background-image: svg-load('../blocks/sprite-svg/svg/sort.svg', fill=$text-color);
+      }
+    }
+  }
 }
