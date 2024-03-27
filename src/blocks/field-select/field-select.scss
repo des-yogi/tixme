@@ -140,5 +140,12 @@
         background-image: svg-load('../blocks/sprite-svg/svg/sort.svg', fill=$text-color);
       }
     }
+
+    &--filter {
+
+      #{$block-name}__select {
+        background-image: svg-load('../blocks/sprite-svg/svg/filter-24.svg', fill=$text-color);
+      }
+    }
   }
 }

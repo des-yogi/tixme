@@ -1,0 +1,33 @@
+.user-nav {
+  padding: 16px 0;
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+
+    & + & {
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid $border-color;
+    }
+
+    &.active {
+
+      #{$block-name}__link {
+        color: $link-color;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    padding: 8px 24px;
+    text-decoration: none !important;
+    color: inherit;
+  }
+}

@@ -1,0 +1,37 @@
+<!--DEV
+@ @include('blocks/order-card/order-card.html', {
+  "num": "19995995",
+  "routeStart": "Київ",
+  "routeEnd": "Кам’янець-Подільський",
+  "sume": "710"
+})
+-->
+
+<article class="order-card">
+  <h3 class="visually-hidden">Заказ по маршруту #…</h3>
+
+  <div class="order-card__table">
+    <div class="order-card__inner">
+      <div class="order-card__num">№&thinsp;@@num</div>
+      <div class="order-card__route">
+        <p class="order-card__route-loc">
+          <span>@@routeStart</span>
+          <span>@@routeEnd</span>
+        </p>
+        <p class="order-card__route-info">
+          13:30, 27 січ. 2024, 2 пасажири
+        </p>
+      </div>
+      <div class="order-card__paid">
+        <span>Сплачено</span>
+        <span>@@sume ₴</span>
+      </div>
+      <div class="order-card__more">
+        <a href="#" class="btn">
+          <span>Детальніше</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</article>

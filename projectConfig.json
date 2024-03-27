@@ -53,7 +53,11 @@
     "error-404": [],
     "text-doc": [],
     "payment": [],
-    "countdown": []
+    "countdown": [],
+    "user-area": [],
+    "user-nav": [],
+    "order-card": [],
+    "e-ticket": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",
