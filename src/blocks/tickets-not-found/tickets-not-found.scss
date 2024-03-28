@@ -1,0 +1,21 @@
+.tickets-not-found {
+  max-width: 790px;
+  margin: 0 auto;
+  text-align: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 70px;
+  }
+
+  &__info {
+    margin-top: 0;
+    color: $title-color;
+  }
+
+  &__img {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
