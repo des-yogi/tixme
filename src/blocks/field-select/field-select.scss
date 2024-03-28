@@ -14,8 +14,8 @@
   }
 
   &__select {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    //vertical-align: middle;
     width: 100%;
     min-height: 56px;
     padding: 0 10px 0 $field-padding-horizontal;
@@ -63,6 +63,16 @@
     &.ss-main {
       display: flex;
 
+      &.ss-open-above {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &.ss-open-below {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+
       .ss-values {
         padding-right: 10px;
       }
@@ -70,9 +80,22 @@
 
     &.ss-content {
       padding: 8px 0;
-      margin-top: 5px !important;
+      //margin-top: 5px !important;
       box-shadow: $shadow;
       border: none;
+
+      &.ss-open-above {
+        margin-top: -360px !important;
+      }
+
+      &.ss-open-below {
+        margin-top: 5px !important;
+      }
+
+      //overflow-y: auto;
+
+      // .ss-list {
+      // }
 
       .ss-option {
         padding: 8px 16px;

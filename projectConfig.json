@@ -58,7 +58,8 @@
     "user-nav": [],
     "order-card": [],
     "e-ticket": [],
-    "publications": []
+    "publications": [],
+    "tickets-not-found": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",

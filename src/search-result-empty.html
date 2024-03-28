@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Результати пошуку</title>
+  <title>Результати пошуку: Empty</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -85,69 +85,7 @@
 
         <div class="container  search-result">
 
-          <div class="search-result__header">
-            <h1 class="search-result__title">
-              Квитки на автобус:
-              <span>Кам’янець-Подільський - Львів</span>
-            </h1>
-            <p class="search-result__info">
-              Виїзд та прибуття за місцевим часом
-            </p>
-          </div>
-
-          <div class="search-result__body">
-
-            <div class="search-result__controls">
-
-              <div class="field-select  field-select--icon  field-select--icon--sort">
-                <label for="sort" class="visually-hidden">Сортування</label>
-                <span class="field-select__select-wrap">
-                  <select id="sort" class="field-select__select" name="any">
-                    <option selected disabled>Сортування</option>
-                    <option value="value2">Значение 2</option>
-                    <option value="value3">Значение 3</option>
-                    <option value="value4">Значение 4</option>
-                    <option value="value4">Значение 5</option>
-                    <option value="value4">Значение 6</option>
-                    <option value="value4">Значение 7</option>
-                    <option value="value4">Значение 8</option>
-                    <option value="value4">Значение 9</option>
-                    <option value="value4">Значение 10</option>
-                    <option value="value4">Значение 11</option>
-                    <option value="value4">Значение 12</option>
-                  </select>
-                </span>
-              </div>
-
-            </div>
-
-            <div id="tickets" class="search-result__card-wrapper">
-
-              @@include('blocks/result-card/result-card.html', {
-                "index": "1"
-              })
-
-              @@include('blocks/result-card/result-card.html', {
-                "index": "2"
-              })
-
-              @@include('blocks/result-card/result-card.html', {
-                "index": "3"
-              })
-
-              @@include('blocks/result-card/result-card.html', {
-                "index": "4"
-              })
-
-              @@include('blocks/result-card/result-card.html', {
-                "index": "5"
-              })
-
-            </div>
-
-          </div>
-
-          @@include('blocks/pagination/pagination.html')
+          @@include('blocks/tickets-not-found/tickets-not-found.html')
 
         </div>
 
