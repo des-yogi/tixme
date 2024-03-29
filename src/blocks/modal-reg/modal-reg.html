@@ -1,0 +1,109 @@
+<!--DEV
+@ @include('blocks/modal-reg/modal-reg.html')
+-->
+
+<!-- Modal: "Форма авторизації та реєстрації" -->
+<div class="modal fade  modal-reg" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-reg__dialog">
+    <div class="modal-content  modal-reg__content">
+      <div class="modal-header  modal-reg__header">
+        <h4 class="visually-hidden" id="regModalLabel">Форма авторизації та реєстрації</h4>
+
+        <nav class="modal-reg__nav">
+          <div class="nav nav-tabs  modal-reg__tabs" id="nav-tab" role="tablist">
+            <button class="nav-link  modal-reg__nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Авторизація</button>
+            <button class="nav-link  modal-reg__nav-link" id="nav-reg-tab" data-bs-toggle="tab" data-bs-target="#nav-reg" type="button" role="tab" aria-controls="nav-reg" aria-selected="false">Реєстрація</button>
+          </div>
+        </nav>
+
+        <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Закрити">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+        </button>
+      </div>
+
+      <div class="modal-body  modal-reg__body">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">
+
+            @@include('../../blocks/reg-social/reg-social.html', {
+              "title": "Увійти через"
+            })
+
+            <div class="modal-reg__form-wrapper">
+              <p><strong>Вхід по email</strong></p>
+
+              <form id="loginForm" class="modal-reg__form" action="#" method="post">
+
+                <div class="modal-reg__input-wrapper">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="email" name="email" value="" placeholder="E-mail">
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <div class="field-text__password-wrapper">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <a class="field-text__eye" title="Перемикач видимості пароля"></a>
+                        <input class="field-text__input  field-text__input--required" type="password" name="password" value="" placeholder="Пароль">
+                        <span class="field-text__help-text"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <a href="#" style="display:inline-block; margin-top:16px;" data-bs-target="#restoreModal" data-bs-toggle="modal">Забули пароль?</a>
+
+                  <div class="modal-reg__action">
+                    <button type="submit" name="login" class="btn btn--cta">
+                      <span>Увійти</span>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="nav-reg" role="tabpanel" aria-labelledby="nav-reg-tab" tabindex="0">
+
+            @@include('../../blocks/reg-social/reg-social.html', {
+              "title": "Зареєструватись через"
+            })
+
+            <div class="modal-reg__form-wrapper">
+              <p><strong>Реєстрація по email</strong></p>
+
+              <form id="regForm" class="modal-reg__form" action="#" method="post">
+
+                <div class="modal-reg__input-wrapper">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--required" type="email" name="email" value="" placeholder="E-mail">
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <div class="modal-reg__action  modal-reg__agreement">
+                    <div class="field-checkbox" style="margin-bottom:24px;">
+                      <label class="field-checkbox__name" style="font-size:14px;line-height:1.2;">
+                        <input class="field-checkbox__input  field-checkbox__input--agreement" type="checkbox" name="agreement" value="" checked>
+                        <span class="field-checkbox__name-text">Натискаючи кнопку реєстрації, я приймаю умови <a href="#">договору оферти</a> і не заперечую проти обробки моїх <a href="#">персональних даних</a> і передачі їх третім особам (перевізнику та ін)</span>
+                      </label>
+                    </div>
+
+                    <button class="btn  btn--cta  btn--agreement" type="submit" name="login">
+                      <span>Зареєструватися</span>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

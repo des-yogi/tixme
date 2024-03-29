@@ -1,0 +1,53 @@
+.reg-social {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: $white;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+      background-color: $blue-bg--light;
+    }
+
+    &--fb {
+      background-color: $link-color--hover;
+
+      &:hover,
+      &:focus {
+        background-color: $link-color;
+      }
+    }
+
+    &--apl,
+    &--x {
+      color: $white;
+      background-color: $black;
+
+      &:hover,
+      &:focus {
+        color: $black;
+        background-color: $blue-bg--light;
+      }
+    }
+  }
+}

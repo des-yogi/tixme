@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0 4px;
   font-size: 16px;
+  font-family: $font-family;
   color: inherit;
   border: none;
 
@@ -21,8 +22,18 @@
     border-radius: $border-radius;
     box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.06), 1px 5px 3px 2px rgba(0, 0, 0, 0.02);
 
-    // .ss-list {
-    // }
+    .ss-search {
+      font-family: inherit;
+    }
+
+    .ss-list {
+
+      & > .ss-search {
+        padding: 8px 16px 0 16px;
+        font-size: $font-size-sm;
+        color: inherit;
+      }
+    }
 
     .ss-option {
       padding: 8px 16px;
