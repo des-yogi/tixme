@@ -59,18 +59,23 @@
     "order-card": [],
     "e-ticket": [],
     "publications": [],
-    "tickets-not-found": []
+    "tickets-not-found": [],
+    "modal-reg": [],
+    "modal-restore": [],
+    "email-alert": [],
+    "reg-social": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",
     "../../node_modules/bootstrap/scss/_functions",
     "../../node_modules/bootstrap/scss/_variables",
     "../../node_modules/bootstrap/scss/_mixins",
-    "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_dropdown",
+    "../../node_modules/bootstrap/scss/_nav",
+    "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
-    "../../node_modules/bootstrap/scss/_offcanvas",
     "../../node_modules/bootstrap/scss/_tooltip",
+    "../../node_modules/bootstrap/scss/_offcanvas",
     "../../node_modules/tiny-slider/dist/tiny-slider.css",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss"

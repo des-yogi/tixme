@@ -57,6 +57,10 @@
       padding: 0;
     }
 
+    &[type='password'] {
+      padding-right: 60px;
+    }
+
     &::placeholder {
       color: $text-muted;
       opacity: 1;
@@ -81,6 +85,43 @@
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &__password-wrapper {
+    position: relative;
+  }
+
+  &__eye {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/eye-open.svg', fill=$link-color--hover);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-image: svg-load('../blocks/sprite-svg/svg/eye-open.svg', fill=$link-color);
+    }
+
+    &.show {
+      background-image: svg-load('../blocks/sprite-svg/svg/eye-closed.svg', fill=$link-color--hover);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/eye-closed.svg', fill=$link-color);
+      }
+    }
   }
 
   &--error {

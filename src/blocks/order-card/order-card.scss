@@ -11,7 +11,7 @@
 
   &:has(#{$block-name}__more>.btn:hover),
   &:has(#{$block-name}__more>.btn:focus) {
-    border-color: $link-color;
+    border-color: $link-color--hover;
   }
 
   & + & {

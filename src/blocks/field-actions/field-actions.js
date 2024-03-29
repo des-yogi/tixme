@@ -1,12 +1,12 @@
 (function () {
-  //const agreementElems = document.querySelectorAll('.contacts__agreement');
   const agreementElems = document.querySelectorAll('[class$="__agreement"]');
 
   for (let i = 0; i < agreementElems.length; i++) {
     let agreementElem = agreementElems[i];
     //const submitBtn = agreementElem.querySelector('.contacts__submit');
-    const submitBtn = agreementElem.querySelector('button[type=submit]');
-    const agreementCheckbox = agreementElem.querySelector('input[name=agreement]');
+    const submitBtn = agreementElem.querySelector('button[class$="--agreement"]');
+    console.log("submitBtn: " + submitBtn);
+    const agreementCheckbox = agreementElem.querySelector('input[class$="--agreement"]');
 
     if (agreementCheckbox) {
       agreementCheckbox.addEventListener('change', function (e) {
@@ -18,5 +18,4 @@
       });
     }
   }
-
 })();

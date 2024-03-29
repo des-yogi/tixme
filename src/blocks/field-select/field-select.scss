@@ -81,6 +81,7 @@
     &.ss-content {
       padding: 8px 0;
       //margin-top: 5px !important;
+      font-family: $font-family;
       box-shadow: $shadow;
       border: none;
 
@@ -92,10 +93,20 @@
         margin-top: 5px !important;
       }
 
+      .ss-search {
+        font-family: inherit;
+      }
+
       //overflow-y: auto;
 
-      // .ss-list {
-      // }
+      .ss-list {
+
+        & > .ss-search {
+          padding: 8px 16px 0 16px;
+          font-size: $font-size-sm;
+          color: inherit;
+        }
+      }
 
       .ss-option {
         padding: 8px 16px;
