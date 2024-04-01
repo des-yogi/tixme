@@ -14,3 +14,6 @@ Ticketing service
 * https://des-yogi.github.io/tixme/order-page
 * https://des-yogi.github.io/tixme/order-page-empty
 * https://des-yogi.github.io/tixme/publications
+* https://des-yogi.github.io/tixme/new-user-config
+* https://des-yogi.github.io/tixme/user-config
+* https://des-yogi.github.io/tixme/error-401-unauthorized
