@@ -86,11 +86,48 @@
 
                 <div class="user-area__config-wrapper">
 
-                  <h1 class="visually-hidden">Кабінет користувача</h1>
+                  <h1 class="visually-hidden">Редагування даних пасажирів</h1>
 
-                  <div class="user-area__config">
+                  <section class="user-area__config-nav">
+                    <h2 class="visually-hidden">Заголовок... Какая-то навигация или фильтрация???...</h2>
 
+                    <ul class="list-nostyled  user-area__transport-type-list">
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus-24"></use></svg>
+                          <span>Автобуси</span>
+                        </button>
+                      </li>
+
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#train-24"></use></svg>
+                          <span>Залізничні квитки</span>
+                        </button>
+                      </li>
+
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#airplane-24"></use></svg>
+                          <span>Авіаквитки</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <ul class="list-nostyled  user-area__config">
+                    @@include('blocks/user-edit-panel/user-edit-panel.html')
+                    @@include('blocks/user-edit-panel/user-edit-panel.html')
+                    @@include('blocks/user-edit-panel/user-edit-panel.html')
+                  </ul>
+
+                  <div class="user-area__add-passenger">
+                    <button class="btn  btn--no-bg" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Додавання нового пасажира">
+                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus-32"></use></svg>
+                      <span>Додати пасажира</span>
+                    </button>
                   </div>
+
                 </div>
 
               </div>
@@ -111,6 +148,11 @@
   </div>
 
   @@include('blocks/offcanvas/offcanvas.html')
+
+  @@include('blocks/modal-reg/modal-reg.html')
+  @@include('blocks/modal-restore/modal-restore.html')
+
+  @@include('blocks/user-edit-modal/user-edit-modal.html')
 
   @@include('_include/page_bottom.html')
 
@@ -164,6 +206,27 @@
         });
       });
     }
+
+    (function () {
+      const varioModal = document.getElementById('userEditModal')
+      if (varioModal) {
+        varioModal.addEventListener('show.bs.modal', event => {
+          // Button that triggered the modal
+          const button = event.relatedTarget;
+          // Extract info from data-bs-* attributes
+          const recipient = button.getAttribute('data-bs-whatever');
+          // If necessary, you could initiate an Ajax request here
+          // and then do the updating in a callback.
+
+          // Update the modal's content.
+          const modalTitle = varioModal.querySelector('.modal-title');
+          //const modalBodyInput = varioModal.querySelector('.modal-body input');
+
+          modalTitle.textContent = `${recipient}`;
+          //modalBodyInput.value = recipient;
+        })
+      }
+    }());
   </script>
 
 </body>

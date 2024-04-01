@@ -1,0 +1,52 @@
+.user-edit-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px 24px;
+  padding: 16px;
+  background-color: $body-bg;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__name {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    font-size: $font-size--h5;
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__ctrl {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @media (min-width: $screen-sm) {
+      gap: 24px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 auto;
+    }
+
+    & > * {
+      flex: 1 1 50%;
+
+      @media (min-width: $screen-md) {
+        flex: 0 1 160px;
+      }
+
+      @media (min-width: $screen-lg) {
+        min-width: 160px;
+      }
+    }
+  }
+}

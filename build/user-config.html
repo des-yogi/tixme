@@ -17,11 +17,7 @@
   <div class="page__inner">
     <div class="page__content">
       <header class="container  page-header">
-        <div class="page-header__inner">          <a href="index.html" class="logo" title="TixMe">            <img src="img/tixme-logo.svg" alt="logo" width="180" height="40">          </a>          <div class="page-header__service">
-            <button class="user-btn" data-bs-toggle="modal" data-bs-target="#regModal">
-              <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/></svg>
-              <span>Мій квиток</span>
-            </button>            <div class="lang-switcher  dropdown-center">              <button class="dropdown-toggle  lang-switcher__btn" data-bs-toggle="dropdown" aria-expanded="false" title="Перемикач мови сайту">                <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>                <span class="lang-switcher__text">Укр</span>              </button>              <ul class="dropdown-menu  lang-switcher__list">                <li class="lang-switcher__item  active">                  <a class="dropdown-item  lang-switcher__link">Укр</a>                </li>                <li class="lang-switcher__item">                  <a class="dropdown-item  lang-switcher__link" href="#">Анг</a>                </li>              </ul>            </div>            <!--DEV            @ @include('blocks/burger/burger.html')            -->            <button class="burger" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">              <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"/></svg>              <span class="visually-hidden">Перемикач меню</span>            </button>          </div>
+        <div class="page-header__inner">          <a href="index.html" class="logo" title="TixMe">            <img src="img/tixme-logo.svg" alt="logo" width="180" height="40">          </a>          <div class="page-header__service">            <button class="user-btn" data-bs-toggle="modal" data-bs-target="#regModal">              <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/></svg>              <span>Мій квиток</span>            </button>            <!--DEV            @ @include('blocks/lang-switcher/lang-switcher.html')            -->            <div class="lang-switcher  dropdown-center">              <button class="dropdown-toggle  lang-switcher__btn" data-bs-toggle="dropdown" aria-expanded="false" title="Перемикач мови сайту">                <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>                <span class="lang-switcher__text">Укр</span>              </button>              <ul class="dropdown-menu  lang-switcher__list">                <li class="lang-switcher__item  active">                  <a class="dropdown-item  lang-switcher__link">Укр</a>                </li>                <li class="lang-switcher__item">                  <a class="dropdown-item  lang-switcher__link" href="#">Анг</a>                </li>              </ul>            </div>            <!--DEV            @ @include('blocks/burger/burger.html')            -->            <button class="burger" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu">              <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger"/></svg>              <span class="visually-hidden">Перемикач меню</span>            </button>          </div>
         </div>
       </header>
       <main class="main">
@@ -73,8 +69,79 @@
               </div>
               <div class="user-area__card-col">
                 <div class="user-area__config-wrapper">
-                  <h1 class="visually-hidden">Кабінет користувача</h1>
-                  <div class="user-area__config">
+                  <h1 class="visually-hidden">Редагування даних пасажирів</h1>
+                  <section class="user-area__config-nav">
+                    <h2 class="visually-hidden">Заголовок... Какая-то навигация или фильтрация???...</h2>
+                    <ul class="list-nostyled  user-area__transport-type-list">
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bus-24"/></svg>
+                          <span>Автобуси</span>
+                        </button>
+                      </li>
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#train-24"/></svg>
+                          <span>Залізничні квитки</span>
+                        </button>
+                      </li>
+                      <li class="user-area__transport-type-item">
+                        <button class="btn  btn--no-bg">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#airplane-24"/></svg>
+                          <span>Авіаквитки</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </section>
+                  <ul class="list-nostyled  user-area__config">
+                    <li class="user-edit-panel">
+                      <p class="user-edit-panel__name">
+                        Дмитро Музика
+                      </p>
+                      <div class="user-edit-panel__ctrl">
+                        <button class="btn  btn--no-bg">
+                          <span>Видалити</span>
+                        </button>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Редагування даних пасажира">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#edit-24"/></svg>
+                          <span>Редагувати</span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="user-edit-panel">
+                      <p class="user-edit-panel__name">
+                        Дмитро Музика
+                      </p>
+                      <div class="user-edit-panel__ctrl">
+                        <button class="btn  btn--no-bg">
+                          <span>Видалити</span>
+                        </button>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Редагування даних пасажира">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#edit-24"/></svg>
+                          <span>Редагувати</span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="user-edit-panel">
+                      <p class="user-edit-panel__name">
+                        Дмитро Музика
+                      </p>
+                      <div class="user-edit-panel__ctrl">
+                        <button class="btn  btn--no-bg">
+                          <span>Видалити</span>
+                        </button>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Редагування даних пасажира">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#edit-24"/></svg>
+                          <span>Редагувати</span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="user-area__add-passenger">
+                    <button class="btn  btn--no-bg" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Додавання нового пасажира">
+                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus-32"/></svg>
+                      <span>Додати пасажира</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -84,7 +151,131 @@
       </main>
     </div>
     <div class="page__footer-wrapper">      <footer class="page-footer">        <div class="container  page-footer__main">          <div class="row  page-footer__row">            <div class="page-footer__logo-col">              <a href="index.html" class="logo  logo--footer" title="TixMe">                <img src="img/tixme-logo.svg" alt="TixMe logo" width="180" height="40" loading="lazy">              </a>            </div>            <section class="page-footer__info-col">              <h3 class="h5  page-footer__sect-title">Інформація</h3>              <nav class="page-footer__nav">                <ul class="list-nostyled  page-footer__nav-list">                  <li class="page-footer__nav-item">                    <a href="#" class="page-footer__nav-link">Про нас</a>                  </li>                  <li class="page-footer__nav-item">                    <a href="#" class="page-footer__nav-link">Контакти</a>                  </li>                  <li class="page-footer__nav-item">                    <a href="#" class="page-footer__nav-link">Повернення квитків</a>                  </li>                </ul>              </nav>            </section>            <section class="page-footer__docs-col">              <h3 class="h5  page-footer__sect-title">Документи</h3>              <ul class="list-nostyled  page-footer__nav-list">                <li class="page-footer__nav-item">                  <a href="#" class="page-footer__nav-link">Публічна оферта</a>                </li>                <li class="page-footer__nav-item">                  <a href="#" class="page-footer__nav-link">Політики конфіденційності</a>                </li>              </ul>            </section>            <section class="page-footer__tel-col">              <h3 class="visually-hidden">Контакти</h3>              <a href="tel:+380954444444" class="h5  page-footer__sect-title  page-footer__tel">                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tel"/></svg>                <span>+38 095 444 44 44</span>              </a>              <p class="page-footer__add-text">З питань придбання, обміну та повернення квитків, будь ласка, звертайтесь до служби підтримки з 09:00 до 21:00</p>            </section>            <div class="page-footer__soc-col">              <!--DEV              @ @include('blocks/social-links/social-links.html')              -->              <section class="social-links">                <h3 class="visually-hidden">Посилання на соц. мережі</h3>                <ul class="list-nostyled  social-links__list">                  <li class="social-links__item">                    <a href="#" class="social-links__link" target="_blank" rel="nofollow noopener" title="Facebook">                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/></svg>                    </a>                  </li>                  <li class="social-links__item">                    <a href="#" class="social-links__link" target="_blank" rel="nofollow noopener" title="Instagram">                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/></svg>                    </a>                  </li>                  <li class="social-links__item">                    <a href="#" class="social-links__link" target="_blank" rel="nofollow noopener" title="TikTok">                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tiktok"/></svg>                    </a>                  </li>                </ul>              </section>            </div>          </div>        </div>        <div class="container  page-footer__bottom">          <p>© 2024 TixMe. Всі права захищені.</p>        </div>      </footer>    </div>
-  </div>  <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">    <div class="offcanvas__header">      <h5 class="offcanvas__title  visually-hidden" id="sideMenuLabel">Меню сайту</h5>      <button type="button" class="btn  btn--icon" data-bs-dismiss="offcanvas" aria-label="Закрити меню">        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>      </button>    </div>    <div class="offcanvas-body  offcanvas__body">      <!--DEV      @ @include('blocks/main-menu/main-menu.html')      -->      <nav class="main-menu">        <ul class="list-nostyled  main-menu__list">          <li class="main-menu__item">            <a href="#" class="main-menu__link">Про нас</a>          </li>          <li class="main-menu__item  active">            <a class="main-menu__link">Питання та відповіді</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Повернути квитки</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Блог</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Контакти</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Партнерам</a>          </li>        </ul>      </nav>    </div>  </div>  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->  <script src="js/slimselect.min.js"></script>  <script src="js/script.min.js"></script>  <script>
+  </div>  <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">    <div class="offcanvas__header">      <h5 class="offcanvas__title  visually-hidden" id="sideMenuLabel">Меню сайту</h5>      <button type="button" class="btn  btn--icon" data-bs-dismiss="offcanvas" aria-label="Закрити меню">        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>      </button>    </div>    <div class="offcanvas-body  offcanvas__body">      <!--DEV      @ @include('blocks/main-menu/main-menu.html')      -->      <nav class="main-menu">        <ul class="list-nostyled  main-menu__list">          <li class="main-menu__item">            <a href="#" class="main-menu__link">Про нас</a>          </li>          <li class="main-menu__item  active">            <a class="main-menu__link">Питання та відповіді</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Повернути квитки</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Блог</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Контакти</a>          </li>          <li class="main-menu__item">            <a href="#" class="main-menu__link">Партнерам</a>          </li>        </ul>      </nav>    </div>  </div>  <!--DEV  @ @include('blocks/modal-reg/modal-reg.html')  -->  <!-- Modal: "Форма авторизації та реєстрації" -->  <div class="modal fade  modal-reg" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered  modal-reg__dialog">      <div class="modal-content  modal-reg__content">        <div class="modal-header  modal-reg__header">          <h4 class="visually-hidden" id="regModalLabel">Форма авторизації та реєстрації</h4>          <nav class="modal-reg__nav">            <div class="nav nav-tabs  modal-reg__tabs" id="nav-tab" role="tablist">              <button class="nav-link  modal-reg__nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Авторизація</button>              <button class="nav-link  modal-reg__nav-link" id="nav-reg-tab" data-bs-toggle="tab" data-bs-target="#nav-reg" type="button" role="tab" aria-controls="nav-reg" aria-selected="false">Реєстрація</button>            </div>          </nav>          <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Закрити">            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>          </button>        </div>        <div class="modal-body  modal-reg__body">          <div class="tab-content" id="nav-tabContent">            <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">              <!--DEV              @ @include('blocks/reg-social/reg-social.html', {                "title": "Увійти через"              })              -->              <section class="reg-social">                <h5 class="visually-hidden">Доступ до сервісу через соц. мережі</h5>                <p class="reg-social__title">Увійти через</p>                <ul class="list-nostyled  reg-social__list">                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--google" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Google</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--fb" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Facebook</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--apl" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Apple</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#apple-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--x" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">X (ex Twitter)</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#x-32"/></svg>                    </a>                  </li>                </ul>              </section>              <div class="modal-reg__form-wrapper">                <p><strong>Вхід по email</strong></p>                <form id="loginForm" class="modal-reg__form" action="#" method="post">                  <div class="modal-reg__input-wrapper">                    <label class="field-text">                      <span class="field-text__input-wrap">                        <input class="field-text__input  field-text__input--required" type="email" name="email" value placeholder="E-mail">                        <span class="field-text__help-text"></span>                      </span>                    </label>                    <div class="field-text__password-wrapper">                      <label class="field-text">                        <span class="field-text__input-wrap">                          <a class="field-text__eye" title="Перемикач видимості пароля"></a>                          <input class="field-text__input  field-text__input--required" type="password" name="password" value placeholder="Пароль">                          <span class="field-text__help-text"></span>                        </span>                      </label>                    </div>                    <a href="#" style="display:inline-block; margin-top:16px;" data-bs-target="#restoreModal" data-bs-toggle="modal">Забули пароль?</a>                    <div class="modal-reg__action">                      <button type="submit" name="login" class="btn btn--cta">                        <span>Увійти</span>                      </button>                    </div>                  </div>                </form>              </div>            </div>            <div class="tab-pane fade" id="nav-reg" role="tabpanel" aria-labelledby="nav-reg-tab" tabindex="0">              <!--DEV              @ @include('blocks/reg-social/reg-social.html', {                "title": "Увійти через"              })              -->              <section class="reg-social">                <h5 class="visually-hidden">Доступ до сервісу через соц. мережі</h5>                <p class="reg-social__title">Зареєструватись через</p>                <ul class="list-nostyled  reg-social__list">                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--google" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Google</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--fb" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Facebook</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--apl" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">Apple</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#apple-32"/></svg>                    </a>                  </li>                  <li class="reg-social__item">                    <a href="#" class="reg-social__link  reg-social__link--x" target="_blank" rel="nofollow noopener">                      <span class="visually-hidden">X (ex Twitter)</span>                      <svg width="32" height="32" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#x-32"/></svg>                    </a>                  </li>                </ul>              </section>              <div class="modal-reg__form-wrapper">                <p><strong>Реєстрація по email</strong></p>                <form id="regForm" class="modal-reg__form" action="#" method="post">                  <div class="modal-reg__input-wrapper">                    <label class="field-text">                      <span class="field-text__input-wrap">                        <input class="field-text__input  field-text__input--required" type="email" name="email" value placeholder="E-mail">                        <span class="field-text__help-text"></span>                      </span>                    </label>                    <div class="modal-reg__action  modal-reg__agreement">                      <div class="field-checkbox" style="margin-bottom:24px;">                        <label class="field-checkbox__name" style="font-size:14px;line-height:1.2;">                          <input class="field-checkbox__input  field-checkbox__input--agreement" type="checkbox" name="agreement" value checked>                          <span class="field-checkbox__name-text">Натискаючи кнопку реєстрації, я приймаю умови <a href="#">договору оферти</a> і не заперечую проти обробки моїх <a href="#">персональних даних</a> і передачі їх третім особам (перевізнику та ін)</span>                        </label>                      </div>                      <button class="btn  btn--cta  btn--agreement" type="submit" name="login">                        <span>Зареєструватися</span>                      </button>                    </div>                  </div>                </form>              </div>            </div>          </div>        </div>      </div>    </div>  </div>  <!--DEV  @ @include('blocks/modal-restore/modal-restore.html')  -->  <!-- Modal: "Форма Відновлення паролю" -->  <div class="modal fade  modal-restore" id="restoreModal" tabindex="-1" aria-labelledby="restoreModalLabel" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered  modal-reg__dialog">      <div class="modal-content  modal-reg__content">        <div class="modal-header  modal-reg__header">          <h4 class="visually-hidden" id="restoreModalLabel">Форма Відновлення паролю</h4>          <p><strong>Відновлення паролю</strong></p>          <!-- <nav class="modal-reg__nav">            <div class="nav nav-tabs  modal-reg__tabs" id="nav-tab" role="tablist">              <button class="nav-link  modal-reg__nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Авторизація</button>              <button class="nav-link  modal-reg__nav-link" id="nav-reg-tab" data-bs-toggle="tab" data-bs-target="#nav-reg" type="button" role="tab" aria-controls="nav-reg" aria-selected="false">Реєстрація</button>            </div>          </nav> -->          <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Закрити">            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>          </button>        </div>        <div class="modal-body  modal-reg__body" style="padding-top:24px;">          <div class="modal-reg__form-wrapper">            <form id="restoreForm" class="modal-reg__form" action="#" method="post">              <div class="modal-reg__input-wrapper">                <label class="field-text">                  <span class="field-text__input-wrap">                    <input class="field-text__input  field-text__input--required" type="email" name="email" value placeholder="E-mail">                    <span class="field-text__help-text"></span>                  </span>                </label>                <div style="font-size:14px; color:#6D6D6D;">Вкажіть вашу email-адресу, і ми надішлемо вам посилання на відновлення пароля</div>                <a href="#" style="display:inline-block; margin-top:16px;" data-bs-target="#regModal" data-bs-toggle="modal">Вхід по email</a>                <div class="modal-reg__action">                  <button class="btn  btn--cta" type="submit" name="restore">                    <span>Відновити</span>                  </button>                </div>              </div>            </form>          </div>          <!-- Скрытй блок с сообщением по проверке email            <p><strong>Перевірте Вашу email скриньку</strong></p>            <p style="font-size:14px; color:#6D6D6D;">На пошту направлено листа з інструкцією по активації акаунту</p>            <div class="modal-reg__action">              <button class="btn  btn--cta" data-bs-dismiss="modal">                <span>Закрити</span>              </button>            </div>          -->        </div>      </div>    </div>  </div>  <!--DEV
+  @ @include('blocks/user-edit-modal/user-edit-modal.html')
+  -->
+  <!-- Modal: User Add & Edit -->
+  <div class="modal fade  user-edit-modal" id="userEditModal" tabindex="-1" aria-labelledby="userEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollable  user-edit-modal__dialog">
+      <div class="modal-content  user-edit-modal__content">
+        <div class="modal-header  user-edit-modal__header">
+          <h4 class="modal-title  user-edit-modal__title" id="userEditModalLabel">Редагування даних пасажира</h4>
+          <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Закрити">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
+          </button>
+        </div>
+        <section class="modal-body  user-edit-modal__body">
+          <h5 style="margin:0 0 16px;">Інформація про пасажира</h5>
+          <form id="userEditForm" class="user-edit-modal__form" action="#" method="post">
+            <div class="row  user-edit-modal__row">
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Ім’я</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input  field-text__input--required" type="text" name="name" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Прізвище</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input  field-text__input--required" type="text" name="surname" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">По батькові</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" name="patronymic" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <div class="field-select">
+                  <span class="field-select__select-wrap">
+                    <label for="genderMod" class="field-text__name">Стать</label>
+                    <select id="genderMod" class="field-select__select" name="gender">
+                      <option value="value3">Не визначено</option>
+                      <option value="value1">Чоловіча</option>
+                      <option value="value2">Жіноча</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Дата народження</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input  date" type="text" name="birthdate" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Громадянство</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" name="citizenship" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Email</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="email" name="email" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Телефон</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="tel" name="tel" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Тип документу</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" name="doctype" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="user-edit-modal__col">
+                <label class="field-text">
+                  <span class="field-text__name">Дата видачі документа</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input  date" type="text" name="issuedate" value>
+                    <span class="field-text__help-text"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </section>
+        <div class="modal-footer  user-edit-modal__footer">
+          <button form="userEditForm" class="btn  btn--no-bg" type="reset">
+            <span>Скасувати</span>
+          </button>
+          <button form="userEditForm" class="btn" type="submit">
+            <span>Зберегти</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->  <script src="js/slimselect.min.js"></script>  <script src="js/script.min.js"></script>  <script>
     const selArr = document.querySelectorAll('.spec-select');
     if (selArr) {
       selArr.forEach(function(item) {
@@ -130,6 +321,24 @@
         });
       });
     }
+    (function () {
+      const varioModal = document.getElementById('userEditModal')
+      if (varioModal) {
+        varioModal.addEventListener('show.bs.modal', event => {
+          // Button that triggered the modal
+          const button = event.relatedTarget;
+          // Extract info from data-bs-* attributes
+          const recipient = button.getAttribute('data-bs-whatever');
+          // If necessary, you could initiate an Ajax request here
+          // and then do the updating in a callback.
+          // Update the modal's content.
+          const modalTitle = varioModal.querySelector('.modal-title');
+          //const modalBodyInput = varioModal.querySelector('.modal-body input');
+          modalTitle.textContent = `${recipient}`;
+          //modalBodyInput.value = recipient;
+        })
+      }
+    }());
   </script>
 </body>
 </html>

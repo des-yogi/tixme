@@ -63,7 +63,10 @@
     "modal-reg": [],
     "modal-restore": [],
     "email-alert": [],
-    "reg-social": []
+    "reg-social": [],
+    "user-edit-modal": [],
+    "user-edit-panel": [],
+    "new-user-config": []
   },
   "addCssBefore": [
     "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css",

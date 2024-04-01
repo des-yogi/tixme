@@ -56,8 +56,8 @@
   }
 
   svg {
-    width: 24px;
-    height: 24px;
+    //width: 24px;
+    //height: 24px;
     fill: currentColor;
   }
 
@@ -116,19 +116,19 @@
 
   &--no-bg {
     color: $title-color;
-    background-color: $white;
+    background-color: transparent;
     box-shadow: none;
 
     &:hover,
     &:focus {
       color: $link-color;
-      background-color: $white;
+      background-color: transparent;
     }
 
     &--disabled,
     &:disabled {
       color: $text-muted;
-      background-color: $white;
+      background-color: transparent;
       cursor: not-allowed;
 
       @at-root a.btn--disabled {
