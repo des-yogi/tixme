@@ -1,0 +1,138 @@
+<!--DEV
+@ @include('blocks/user-edit-modal/user-edit-modal.html')
+-->
+
+<!-- Modal: User Add & Edit -->
+<div class="modal fade  user-edit-modal" id="userEditModal" tabindex="-1" aria-labelledby="userEditModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollable  user-edit-modal__dialog">
+    <div class="modal-content  user-edit-modal__content">
+
+      <div class="modal-header  user-edit-modal__header">
+        <h4 class="modal-title  user-edit-modal__title" id="userEditModalLabel">Редагування даних пасажира</h4>
+        <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Закрити">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+        </button>
+      </div>
+
+      <section class="modal-body  user-edit-modal__body">
+        <h5 style="margin:0 0 16px;">Інформація про пасажира</h5>
+
+        <form id="userEditForm" class="user-edit-modal__form" action="#" method="post">
+          <div class="row  user-edit-modal__row">
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Ім’я</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  field-text__input--required" type="text" name="name" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Прізвище</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  field-text__input--required" type="text" name="surname" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">По батькові</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" name="patronymic" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <div class="field-select">
+                <span class="field-select__select-wrap">
+                  <label for="genderMod" class="field-text__name">Стать</label>
+                  <select id="genderMod" class="field-select__select" name="gender">
+                    <option value="value3">Не визначено</option>
+                    <option value="value1">Чоловіча</option>
+                    <option value="value2">Жіноча</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Дата народження</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  date" type="text" name="birthdate" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Громадянство</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" name="citizenship" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Email</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="email" name="email" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Телефон</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" name="tel" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Тип документу</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" name="doctype" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+            <div class="user-edit-modal__col">
+              <label class="field-text">
+                <span class="field-text__name">Дата видачі документа</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  date" type="text" name="issuedate" value="">
+                  <span class="field-text__help-text"></span>
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </form>
+      </section>
+      <div class="modal-footer  user-edit-modal__footer">
+        <button form="userEditForm" class="btn  btn--no-bg" type="reset">
+          <span>Скасувати</span>
+        </button>
+        <button form="userEditForm" class="btn" type="submit">
+          <span>Зберегти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!--DEV
+@ @include('blocks/user-edit-panel/user-edit-panel.html')
+-->
+
+<li class="user-edit-panel">
+  <p class="user-edit-panel__name">
+    Дмитро Музика
+  </p>
+  <div class="user-edit-panel__ctrl">
+    <button class="btn  btn--no-bg">
+      <span>Видалити</span>
+    </button>
+
+    <button class="btn" data-bs-toggle="modal" data-bs-target="#userEditModal" data-bs-whatever="Редагування даних пасажира">
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#edit-24"></use></svg>
+      <span>Редагувати</span>
+    </button>
+  </div>
+</li>

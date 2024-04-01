@@ -1,4 +1,5 @@
 .field-text {
+  position: relative;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -27,6 +28,7 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     appearance: textfield;
+    text-overflow: ellipsis;
 
     &:hover {
       border-color: $link-color--hover;
@@ -61,6 +63,10 @@
       padding-right: 60px;
     }
 
+    &[type='date'] {
+      -webkit-appearance: none;
+    }
+
     &::placeholder {
       color: $text-muted;
       opacity: 1;
@@ -78,7 +84,7 @@
       padding-right: 32px;
       background-size: 7px;
       background-repeat: no-repeat;
-      background-position: top 22px right 16px;
+      background-position: top 23px right 16px;
       background-image: svg-load('../blocks/field-text/bg-img/asterisk.svg', fill=$accent-color--hover);
     }
   }
@@ -87,9 +93,9 @@
     @include field-help-text;
   }
 
-  &__password-wrapper {
-    position: relative;
-  }
+  // &__password-wrapper {
+
+  // }
 
   &__eye {
     display: block;
