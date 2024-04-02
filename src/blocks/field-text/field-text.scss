@@ -1,5 +1,4 @@
 .field-text {
-  position: relative;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -12,6 +11,7 @@
 
   &__input-wrap {
     display: block;
+    position: relative;
   }
 
   &__input {
@@ -93,9 +93,14 @@
     @include field-help-text;
   }
 
-  // &__password-wrapper {
-
-  // }
+  ul {
+    padding-left: 0;
+    margin-top: 4px;
+    font-size: $font-size-sm;
+    line-height: 1.2em;
+    color: $color-danger;
+    list-style: none;
+  }
 
   &__eye {
     display: block;
